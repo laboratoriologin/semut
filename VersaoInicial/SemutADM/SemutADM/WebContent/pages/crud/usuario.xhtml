@@ -1,0 +1,70 @@
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${usuarioFaces}" />
+	<ui:param name="mbeanModel" value="${usuarioFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${usuarioFaces.crudPesquisaModel}" />
+
+	<ui:define name="cadastro">
+
+		<h:panelGrid width="50%" columns="1" columnClasses="coluna50">
+
+			<p:outputLabel for="itNome" value="Nome" />
+			<p:inputText id="itNome" value="#{mbeanModel.nome}" style="width: 95%" required="true" requiredMessage="Nome: Obrigatório" />
+
+			<p:outputLabel for="itEmail" value="E-mail" />
+			<p:inputText id="itEmail" value="#{mbeanModel.email}" style="width: 95%" validatorMessage="E-mail inválido">
+				<f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+			</p:inputText>
+
+			<p:outputLabel for="itLogin" value="Login" />
+			<p:inputText id="itLogin" value="#{mbeanModel.login}" style="width: 50%" required="true" requiredMessage="Login: Obrigatório" />
+
+			<p:outputLabel for="itSenha" value="Senha" />
+			<p:password id="itSenha" value="#{mbeanModel.senha}" weakLabel="Fraca" goodLabel="Boa" strongLabel="Forte" promptLabel="Digite a senha" match="itConfirmaSenha" minLength="4" style="width: 50%" required="true" requiredMessage="Senha: Obrigatório" feedback="true" />
+
+			<p:outputLabel for="itConfirmaSenha" value="Confirmar Senha" />
+			<p:password id="itConfirmaSenha" value="#{mbeanModel.confirmaSenha}" weakLabel="Fraca" goodLabel="Boa" strongLabel="Forte" promptLabel="Digite a senha" minLength="4" style="width: 50%" required="true" requiredMessage="Confirmar Senha: Obrigatório" />
+
+			<p:outputLabel for="grupo" value="Grupo de Acesso" />
+			<p:selectOneMenu id="grupo" value="#{mbeanModel.grupo.id}" required="true" requiredMessage="Grupo de Acesso: Campo obrigatório" style="width:95%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.grupos}" />
+			</p:selectOneMenu>
+
+			<p:outputLabel for="cbFlagAtivo" value="Ativo?" />
+			<p:selectBooleanCheckbox id="cbFlagAtivo" value="#{mbeanModel.flagAtivo}" />
+
+		</h:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="70%" columns="3" columnClasses="coluna35, coluna35, coluna30">
+
+			<p:outputLabel for="itNomePesquisa" value="Nome" />
+			<p:outputLabel for="itLoginPesquisa" value="Login" />
+			<p:outputLabel for="cbFlagAtivoPesquisa" value="Ativo?" />
+
+
+			<p:inputText id="itNomePesquisa" value="#{mbeanPesquisaModel.nome}" style="width: 95%" />
+			<p:inputText id="itLoginPesquisa" value="#{mbeanPesquisaModel.login}" style="width: 95%" />
+			<p:selectBooleanCheckbox id="cbFlagAtivoPesquisa" value="#{mbeanPesquisaModel.flagAtivo}" />
+
+		</h:panelGrid>
+		<br />
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+
+		<p:column headerText="Nome">
+			<h:outputText value="#{linha.nome}" />
+		</p:column>
+
+		<p:column headerText="Login">
+			<h:outputText value="#{linha.login}" />
+		</p:column>
+
+	</ui:define>
+
+
+</ui:composition>

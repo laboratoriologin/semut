@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmacaoOcorrenciaActivity" >
+
+    <com.login.android.semut.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_transalvador" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.view.ActionBar>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/confirmar_dados"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/lb_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/titulo"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_nome"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_nome"
+                android:paddingLeft="@dimen/padding_large"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/lb_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/nome"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_data"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_data"
+                android:paddingLeft="@dimen/padding_large"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/lb_hora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/data"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_hora"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/hora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_hora"
+                android:paddingLeft="@dimen/padding_large"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+confirmacao_ocorrencia/separator"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+confirmacao_ocorrencia/hora"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
+                android:background="@drawable/dotted" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/lb_ocorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/separator"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_ocorrencia"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/ocorrencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_ocorrencia"
+                android:layout_toLeftOf="@+confirmacao_ocorrencia/imagem"
+                android:paddingLeft="@dimen/padding_large"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/lb_texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/ocorrencia"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_texto"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_texto"
+                android:layout_toLeftOf="@+confirmacao_ocorrencia/imagem"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_large"
+                android:text="@string/texto_vazio"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="14sp" />
+            
+             <TextView
+                android:id="@+confirmacao_ocorrencia/lb_protocolo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/texto"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_small"
+                android:text="@string/lb_protocolo"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+confirmacao_ocorrencia/protocolo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+confirmacao_ocorrencia/lb_protocolo"
+                android:layout_toLeftOf="@+confirmacao_ocorrencia/imagem"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_large"
+                android:text="@string/texto_vazio"
+                android:textColor="@color/cinza_fonte"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+confirmacao_ocorrencia/imagem"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignBottom="@+confirmacao_ocorrencia/texto"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+confirmacao_ocorrencia/lb_ocorrencia"
+                android:layout_marginRight="@dimen/padding_large"
+                android:adjustViewBounds="true"
+                android:src="@drawable/imagem_cancelada" />
+
+            <Button
+                android:id="@+confirmacao_ocorrencia/bt_concluir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+confirmacao_ocorrencia/imagem"
+                android:layout_margin="@dimen/padding_large"
+                android:onClick="concluir"
+                android:text="@string/concluir"
+                android:background="@android:color/transparent"
+                android:textColor="@drawable/pressed_text_button"
+                android:textSize="22sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarcacaoMapaActivity" >
+
+    <com.login.android.semut.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_ocorrencias" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.view.ActionBar>
+
+    <fragment
+        android:id="@+marcacao_mapa/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+marcacao_mapa/bt_continuar"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/actionbar" />
+
+    <Button
+        android:id="@+marcacao_mapa/bt_continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/padding_medium"
+        android:background="@android:color/transparent"
+        android:onClick="continuar"
+        android:text="Continuar" android:padding="@dimen/padding_large"
+        android:textColor="@drawable/pressed_text_button"
+        android:textSize="22sp" />
+
+</RelativeLayout>

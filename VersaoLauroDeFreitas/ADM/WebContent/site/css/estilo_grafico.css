@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+------------------------------------
+-------------Conteúdo Início--------
+------------------------------------
+
+*/
+
+
+.secaoGraficos  {
+    height: 81%;
+    left: 0;
+    min-width: 750px;
+    position: absolute;
+    top: 127px;
+    width: 87%;
+
+}
+
+.caixaGraficos {
+    background-color: #FFF;
+    display: inline-block;
+    float: left;
+    height: 400px;
+    left: 10px;
+    margin: 10px;
+    position: relative;
+    top: 10px;
+    width: 47%;
+	border-color: #33558C;
+	border-width:1px;
+	border-style:solid;
+}
+
+
+.tituloGraficos {
+    background-color: #33558C;
+    background-image: url("../imagens/bg_barrasTitulo.png");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 21px;
+    text-align: left;
+    text-indent: 8px;
+}
+
+
+.botaoSalvarGrafico {
+    height: 20px;
+    left: 90%;
+    position: relative;
+    top: 0;
+    width: 30px;
+	z-index: 10;
+}
+
+.botaoAmpliarGrafico {
+    height: 20px;
+    left: 94%;
+    position: absolute;
+    top: 0;
+    width: 30px;
+	z-index: 10;
+}
+
+/*-------------Abas numeradas das "páginas" dos gráficos------------*/
+
+
+#abasGraficos {
+    border-bottom: 2.5px solid #5C6C9C;
+    display: inline-block;
+    float: right;
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 103px;
+    width: 100%;
+
+}
+
+#abasNumeradas {
+	margin: 0; padding: 0;
+}
+
+#abasNumeradas ul {
+	margin: 0; padding: 0;
+	margin-left: 0px;
+	}
+
+#abasNumeradas ul li {
+	display: inline;
+	}
+	
+#abasNumeradas ul li a {
+    background: none repeat scroll 0 0 #404963;
+    border: medium none;
+    color: #727C99;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 13px;
+    line-height: 13px;
+    padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+	
+}
+
+
+#abasNumeradas ul li a:hover {
+	background: #5C6C9C;
+	color: #FFF;
+	border: none;
+	border-bottom: none;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#abasNumeradas ul li a:active {
+	background: #5C6C9C;
+	color: #FFF;
+	border: none;
+	border-bottom: none;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+
+.abaSelecionada {
+	background: #5C6C9C !important;
+	color: #FFF !important;
+	border: none !important;
+	border-bottom: none !important;
+	text-decoration: none !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-weight: bold  !important;
+}
+
+/*------------- Ocorrências pendentes ------------*/
+
+#botaoOcorrenciasPendentes {
+    background-color: #6B2424;
+    height: 493px;
+    left: 138px;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    z-index: 11;
+    cursor: pointer;
+}
+
+#tempoRealOcorrenciasPendentes {
+    background-color: #000066;
+    height: 232px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 139px;
+	background-image:url("../imagens/bg_tempoRealOcorrenciasPendentes.png");
+}
+
+#numeroOcorrenciasPendentesGraf {
+    display: block;
+    height: 130px;
+    min-width: 130px;
+    position: absolute;
+    top: 23px;
+    width: 130px;
+}
+
+#legendaOcorrenciasPendentesGraf {
+    display: block;
+    height: 30px;
+    min-width: 130px;
+    position: absolute;
+    top: 145px;
+    width: 130px;	
+}
+
+/*-------------Seção informativa - Ocorrências pendentes e resolvidas no dia------------*/
+
+#secaoInfor  {
+    display: inline-block;
+    height: 80%;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+    top: 127px;
+    width: 163px;
+}
+
+.numeroOcorrenciasGraf {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 40px;
+    word-wrap: break-word;
+}
+
+.legendaOcorrenciasGraf {
+    color: #FFFFFF;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;	
+}
+
+
+/*------------- Ocorrências SUCOM resolvidas no dia ------------*/
+
+#sucomOcorenciasResolvidas {
+    background-color: #035946;
+    height: 119px;
+    left: 0;
+    position: absolute;
+    top: 243px;
+    width: 129px;
+	background-image:url("../imagens/bg_ocorenciasResolvidas.png");
+}
+
+#legendaOcorrenciasResSucomGraf {
+    display: block;
+    height: 30px;
+    min-width: 130px;
+    position: absolute;
+    top: 10px;
+    width: 120px;	
+}
+
+#numeroOcorrenciasResSucomGraf {
+    display: block;
+    height: 50px;
+    min-width: 130px;
+    position: absolute;
+    top: 53px;
+    width: 120px;	
+}
+
+/*------------- Ocorrências TRANSALVADOR resolvidas no dia ------------*/
+
+#transalvadorOcorenciasResolvidas {
+    background-color: #035946;
+    height: 119px;
+    left: 0;
+    position: absolute;
+    top: 245px;
+    width: 129px;
+	background-image:url("../imagens/bg_ocorenciasResolvidas.png");
+}
+
+#legendaOcorrenciasResTransalGraf {
+    display: block;
+    height: 30px;
+    min-width: 130px;
+    position: absolute;
+    top: 10px;
+    width: 120px;
+}
+
+#numeroOcorrenciasResTransalGraf {
+    display: block;
+    height: 50px;
+    min-width: 130px;
+    position: absolute;
+    top: 59px;
+    width: 120px;	
+}
+
+
+/*dialog ajax */
+
+.myDialog {}
+
+.myDialog .ui-icon{
+    display:none !important;
+}

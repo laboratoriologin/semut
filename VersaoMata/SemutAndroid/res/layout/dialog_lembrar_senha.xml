@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+dialog_lembrar_senha/aviso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Digite o seu e-mail para enviarmos uma nova senha." />
+
+    <EditText
+        android:id="@+dialog_lembrar_senha/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress" />
+
+    <LinearLayout
+        android:id="@+dialog_lembrar_senha/ll_bt_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="3" >
+
+        <Button
+            android:id="@+dialog_lembrar_senha/bt_enviar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:onClick="enviarEmail"
+            android:text="@string/enviar"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        
+
+        <Button
+            android:id="@+dialog_lembrar_senha/bt_cancelar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:onClick="cancelarLembrarSenha"
+            android:text="@string/cancelar"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

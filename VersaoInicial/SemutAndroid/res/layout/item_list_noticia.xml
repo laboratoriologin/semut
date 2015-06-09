@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+item_list_noticia/borda"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_small"
+    android:background="@drawable/borda_item_list"
+    android:padding="@dimen/padding_medium"
+    tools:context=".adapter.ListItemAdapterNoticia" >
+
+    <RelativeLayout
+        android:id="@+item_list_noticia/cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+item_list_noticia/data_publicacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transalvador"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:text="xxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+item_list_noticia/imgCabecalho"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+item_list_noticia/categoria"
+            android:layout_alignTop="@+item_list_noticia/categoria"
+            android:layout_toLeftOf="@+item_list_noticia/categoria"
+            android:contentDescription="@string/image"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+item_list_noticia/categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="xxxxxxxxxx"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+item_list_noticia/text_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+item_list_noticia/cabecalho"
+        android:layout_margin="@dimen/padding_medium"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+item_list_noticia/imgNoticia"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" />
+
+        <!-- <TextView -->
+        <!-- android:id="@+item_list_noticia/categoria" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_toRightOf="@+item_list_noticia/titulo" -->
+        <!-- android:gravity="center_vertical" -->
+        <!-- android:paddingLeft="@dimen/padding_large" -->
+        <!-- android:singleLine="true" -->
+        <!-- android:textColor="#ea2226" -->
+        <!-- android:textSize="12sp" -->
+        <!-- android:textStyle="bold" /> -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+item_list_noticia/titulo" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:ellipsize="none" -->
+        <!-- android:gravity="center_vertical" -->
+        <!-- android:paddingLeft="@dimen/padding_large" -->
+        <!-- android:paddingTop="10dp" -->
+        <!-- android:textStyle="bold" /> -->
+
+        <TextView
+            android:id="@+item_list_noticia/descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+item_list_noticia/imgNoticia"
+            android:layout_toRightOf="@+item_list_noticia/imgNoticia"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="xxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/cinza_fonte"/>
+    </RelativeLayout>
+
+</RelativeLayout>

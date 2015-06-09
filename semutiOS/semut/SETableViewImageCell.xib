@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="122" id="WDf-BG-mGT" customClass="SETableViewImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WDf-BG-mGT" id="4FN-QL-jJj">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oBR-Fd-KNN">
+                        <rect key="frame" x="81" y="38" width="195" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2x-ct-bpC">
+                        <rect key="frame" x="81" y="63" width="195" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" id="jgt-Zn-3pk">
+                        <rect key="frame" x="8" y="6" width="305" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13/13/2013 15:45" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pRd-2X-msR">
+                                <rect key="frame" x="14" y="3" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MZL-Tl-MFC">
+                                <rect key="frame" x="264" y="3" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K88-ad-qnc">
+                                <rect key="frame" x="133" y="3" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81960791349999995" green="0.22745099660000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="T3i-Ad-4SM">
+                        <rect key="frame" x="18" y="34" width="55" height="55"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" id="hKl-Ce-fDw">
+                        <rect key="frame" x="8" y="110" width="305" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.81960791349999995" green="0.22745099660000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="58L-F0-mIt">
+                        <rect key="frame" x="311" y="31" width="2" height="79"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.81960791349999995" green="0.22745099660000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" id="QcY-ox-j2N">
+                        <rect key="frame" x="8" y="31" width="2" height="79"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.81960791349999995" green="0.22745099660000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="KbY-Na-mdN">
+                        <rect key="frame" x="283" y="38" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S4Y-6g-tMu">
+                        <rect key="frame" x="18" y="88" width="55" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgOcorrencia" destination="T3i-Ad-4SM" id="S1Q-gw-d1k"/>
+                <outlet property="imgPendenteEnvio" destination="KbY-Na-mdN" id="SmI-FL-J1r"/>
+                <outlet property="imgTopo" destination="MZL-Tl-MFC" id="8Rh-2Z-aUt"/>
+                <outlet property="lbData" destination="pRd-2X-msR" id="UqU-zH-XEW"/>
+                <outlet property="lbProtocolo" destination="S4Y-6g-tMu" id="sI2-U7-8Ok"/>
+                <outlet property="lbTexto" destination="s2x-ct-bpC" id="jYY-JI-GNB"/>
+                <outlet property="lbTipoOcorrencia" destination="K88-ad-qnc" id="bct-EX-2dp"/>
+                <outlet property="lbTopo" destination="oBR-Fd-KNN" id="Sd6-u5-hnf"/>
+                <outletCollection property="composition" destination="58L-F0-mIt" id="go9-9G-wjW"/>
+                <outletCollection property="composition" destination="hKl-Ce-fDw" id="ZyG-7J-Z1z"/>
+                <outletCollection property="composition" destination="QcY-ox-j2N" id="E2r-lC-BIB"/>
+                <outletCollection property="composition" destination="jgt-Zn-3pk" id="LQS-5T-cQZ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".OcorrenciaActivity" >
+
+    <com.login.android.semut.lauro.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_transalvador" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.lauro.view.ActionBar>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+ocorrencia/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/registro_ocorrencia"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+ocorrencia/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+ocorrencia/titulo"
+                android:layout_margin="@dimen/padding_large" />
+
+            <EditText
+                android:id="@+ocorrencia/texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+ocorrencia/spinner"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="@string/sua_ocorrencia"
+                android:inputType="textMultiLine"
+                android:lines="5" />
+
+            <Button
+                android:id="@+ocorrencia/bt_enviar_imagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+ocorrencia/texto"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@android:drawable/ic_menu_camera"
+                android:onClick="openFoto"
+                android:text="@string/enviar_imagem"
+                android:textColor="@drawable/pressed_text_button"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+ocorrencia/imagem_upload"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+ocorrencia/bt_enviar_imagem"
+                android:layout_below="@+ocorrencia/bt_enviar_imagem"
+                android:adjustViewBounds="true" />
+
+            <ImageView
+                android:id="@+ocorrencia/bt_girar_imagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+ocorrencia/imagem_upload"
+                android:layout_toRightOf="@+ocorrencia/imagem_upload"
+                android:onClick="rotateImage"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+ocorrencia/bt_remover_imagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+ocorrencia/bt_girar_imagem"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:layout_toRightOf="@+ocorrencia/imagem_upload"
+                android:onClick="removeImage"
+                android:src="@android:drawable/ic_menu_delete"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+ocorrencia/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+ocorrencia/bt_concluir"
+                android:layout_alignRight="@+ocorrencia/bt_concluir"
+                android:layout_alignTop="@+ocorrencia/bt_girar_imagem"
+                android:layout_toLeftOf="@+ocorrencia/bt_girar_imagem"
+                android:lines="2"
+                android:minLines="2"
+                android:checked="true"
+                android:text="@string/localizacao_atual"
+                android:textColor="@drawable/pressed_text_button"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+ocorrencia/bt_concluir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+ocorrencia/imagem_upload"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
+                android:background="@android:color/transparent"
+                android:onClick="continuar"
+                android:text="@string/continuar"
+                android:textColor="@drawable/pressed_text_button"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

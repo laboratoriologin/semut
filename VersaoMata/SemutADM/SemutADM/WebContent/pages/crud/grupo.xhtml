@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${grupoFaces}" />
+	<ui:param name="mbeanModel" value="${grupoFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${grupoFaces.crudPesquisaModel}" />
+
+	<ui:define name="cadastro">
+
+		<h:panelGrid columns="1" style="width:50%">
+
+			<p:outputLabel for="descricao" value="Descrição" />
+			<p:inputText id="descricao" required="true" requiredMessage="Descrição: Campo obrigatório" maxlength="50" value="#{mbeanModel.descricao}" styleClass="coluna90" />
+			
+		</h:panelGrid>
+		
+		<h:panelGrid columns="1" style="width:60%">
+
+				<p:commandButton value="Adicionar Permissão" icon="ui-icon-plus" action="#{mbean.addPermissao}" />
+
+				<p:outputPanel id="panelPermissaoUpdate" autoUpdate="true">
+
+					<p:dataTable id="gridPermissao" emptyMessage="Nenhuma permissão adicionada" value="#{mbeanModel.permissoes}" var="permissao">
+
+						<p:column headerText="Menu" styleClass="coluna80">
+							<p:selectOneMenu id="menu" value="#{permissao.menu.id}" required="true" requiredMessage="Menu: Campo obrigatório" style="width:100%">
+								<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+								<f:selectItems value="#{mbean.comboMenus}" />
+							</p:selectOneMenu>
+						</p:column>
+
+						<p:column headerText="Inserir" style="text-align: center" styleClass="coluna5">
+							<p:selectBooleanCheckbox value="#{permissao.flagInserir}" />
+						</p:column>
+
+						<p:column headerText="Alterar" style="text-align: center" styleClass="coluna5">
+							<p:selectBooleanCheckbox value="#{permissao.flagAlterar}" />
+						</p:column>
+
+						<p:column headerText="Excluir" style="text-align: center" styleClass="coluna5">
+							<p:selectBooleanCheckbox value="#{permissao.flagExcluir}" />
+						</p:column>
+
+						<p:column headerText="Remover" style="text-align: center" styleClass="coluna5">
+							<p:commandLink action="#{mbean.delPermissao}" process="@this">
+								<h:graphicImage value="../resources/images/delete16.png" style="border: 0px" />
+								<f:setPropertyActionListener target="#{mbean.permissaoSelecionada}" value="#{permissao}" />
+							</p:commandLink>
+						</p:column>
+
+					</p:dataTable>
+
+				</p:outputPanel>
+
+			</h:panelGrid>
+		
+
+	</ui:define>
+
+	<ui:define name="pesquisaCampos">
+
+		<h:panelGrid columns="1" style="width:50%">
+
+			<p:outputLabel for="descricaoPesquisa" value="Descrição" />
+			<p:inputText id="descricaoPesquisa" value="#{mbeanPesquisaModel.descricao}" styleClass="coluna90" />
+
+		</h:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+
+		<p:column headerText="Descrição">
+			<h:outputText value="#{linha.descricao}" />
+		</p:column>
+
+	</ui:define>
+
+</ui:composition>

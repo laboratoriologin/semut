@@ -1,0 +1,57 @@
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${categoriaOcorrenciaFaces}" />
+	<ui:param name="mbeanModel" value="${categoriaOcorrenciaFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${categoriaOcorrenciaFaces.crudPesquisaModel}" />
+
+	<ui:define name="cadastro">
+
+		<h:panelGrid width="60%" columns="2" columnClasses="coluna50">
+
+			<p:outputLabel for="itNome" value="Nome" />
+			<p:outputLabel for="grupoOcorrencia" value="Grupo de Ocorrência:" />
+			<p:inputText id="itNome" value="#{mbeanModel.nome}" style="width: 95%" required="true" requiredMessage="Nome: Obrigatório" />
+
+			<p:selectOneMenu id="grupoOcorrencia" value="${mbeanModel.grupoOcorrencia.id}"  style="width:100%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.gruposOcorrencias}" />
+			</p:selectOneMenu>
+
+		</h:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="60%" columns="2" columnClasses="coluna50">
+
+			<p:outputLabel for="itNomePesquisa" value="Nome" />
+			<p:outputLabel for="grupoOcorrenciaPesquisa" value="Grupo de Ocorrência" />
+			<p:inputText id="itNomePesquisa" value="#{mbeanPesquisaModel.nome}" style="width: 95%" />
+			<p:selectOneMenu id="grupoOcorrenciaPesquisa" value="${mbeanPesquisaModel.grupoOcorrencia.id}" style="width:100%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.gruposOcorrencias}" />
+			</p:selectOneMenu>
+		</h:panelGrid>
+		<br />
+
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+
+		<p:column headerText="Nome">
+			<div align="center">
+				<h:outputText value="#{linha.nome}" />
+			</div>
+		</p:column>
+
+		<p:column headerText="Grupo de Ocorrência">
+			<div align="center">
+				<h:outputText value="#{linha.grupoOcorrencia.nome}" />
+			</div>
+		</p:column>
+
+
+	</ui:define>
+
+
+</ui:composition>

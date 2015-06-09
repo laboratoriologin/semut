@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_list_noticia_borda"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_small"
+    android:background="@drawable/borda_item_list"
+    android:padding="@dimen/padding_medium"
+    tools:context=".adapter.ListItemAdapterNoticia" >
+
+    <RelativeLayout
+        android:id="@+id/item_list_noticia_cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/item_list_noticia_data_publicacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transalvador"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:text="xxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/item_list_noticia_imgCabecalho"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_list_noticia_categoria"
+            android:layout_alignTop="@+id/item_list_noticia_categoria"
+            android:layout_toLeftOf="@+id/item_list_noticia_categoria"
+            android:contentDescription="@string/image"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_list_noticia_categoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="xxxxxxxxxx"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_list_noticia_text_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_list_noticia_cabecalho"
+        android:layout_margin="@dimen/padding_medium"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/item_list_noticia_imgNoticia"
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/item_list_noticia_relative_layout_np"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_list_noticia_imgNoticia"
+            android:layout_margin="@dimen/padding_medium"
+            android:layout_toRightOf="@+id/item_list_noticia_imgNoticia"
+            android:background="#60d1d2d4"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/item_list_noticia_text_view_np"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"                
+                android:textColor="@color/cinza_fonte"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/item_list_noticia_img_upload"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:adjustViewBounds="true"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/image"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_list_noticia_descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_list_noticia_relative_layout_np"
+            android:layout_toRightOf="@+id/item_list_noticia_imgNoticia"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="xxxxxxxxxxxxxxxxxxxx"
+            android:textColor="@color/cinza_fonte" />
+    </RelativeLayout>
+
+</RelativeLayout>

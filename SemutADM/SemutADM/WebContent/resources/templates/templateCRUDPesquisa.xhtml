@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core">
+
+	<p:tabView id="tabview" dynamic="false" >
+
+		<ui:insert name="tabsMeio" />
+
+		<p:tab id="tabPesquisa" title="Pesquisa">
+
+			<h:form id="formPesquisa" prependId="false">
+
+				<p:outputPanel id="opPesquisa" layout="block" autoUpdate="#{empty autoUpdatePesquisa ? false : autoUpdatePesquisa}" style="width: 97.5%;">
+
+					<h:panelGrid columns="1" style="width: 100%">
+
+						<p:fieldset legend="Filtro" style="width: 100%" toggleable="true">
+
+							<h:panelGrid columns="1" styleClass="coluna100">
+
+								<ui:insert name="pesquisaCampos" />
+
+								<ui:include src="comandoCRUDPesquisa.xhtml" />
+
+							</h:panelGrid>
+
+						</p:fieldset>
+
+						<p:fieldset legend="Resultado" style="width: 100%">
+
+							<p:dataTable id="gridPesquisa" emptyMessage="Nenhum registro encontrado" style="width: 100%" paginator="true" paginatorAlwaysVisible="false" rows="10" value="#{mbean.grid}" var="linha" widgetVar="dtPesquisa">
+
+								<ui:insert name="colunasTabela" />
+
+
+								<p:column headerText="Excluir" styleClass="coluna5" rendered="#{autenticacaoFaces.permissaoSelecionada.flagExcluir}">
+
+									<div align="center">
+
+										<p:commandLink type="button" icon="delete16" id="clExcluir" onclick="cdExcluir.show()" global="false">
+
+											<h:graphicImage value="../resources/images/delete16.png" style="border: 0px" />
+											<f:setPropertyActionListener target="#{mbeanModel.id}" value="#{linha.id}" />
+
+										</p:commandLink>
+
+									</div>
+
+								</p:column>
+
+								<ui:insert name="colunasTabelaFim" />
+
+							</p:dataTable>
+
+						</p:fieldset>
+
+					</h:panelGrid>
+
+				</p:outputPanel>
+
+				<ui:include src="dialogCRUD.xhtml" />
+
+			</h:form>
+
+		</p:tab>
+
+		<ui:insert name="tabsfim" />
+
+	</p:tabView>
+
+</ui:composition>

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="Expires" content="0" />
+<title>Dashboard Prefeitura</title>
+
+<link rel="shortcut icon" href="imagens/favicon.ico" />
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<link href="js/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+<link href="js/pnotify/jquery.pnotify.default.css" rel="stylesheet" type="text/css" />
+<link href="js/pnotify/jquery.pnotify.default.icons.css" rel="stylesheet" type="text/css" />
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/jquery/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery.ui.datepicker-pt-BR.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script src="js/custom_map_tooltip.js" type="text/javascript"></script>
+<script src="js/pnotify/jquery.pnotify.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="geral">
+		<!--Topo Início-->
+		<div id="barraTopo1"><div id="load"><img src="imagens/icone_carregando.gif" style="left: 5px; position: absolute; top: 5px;"></img></div>Dashboard Prefeitura</div>
+		<div id="barraTopo2">
+			<div id="localData"></div>
+			<div id="usuario"></div>
+			<div class="periodo" id="periodo">De: <input type="text" maxlength="10"  id="txtStartDate" style="width: 25%;" > a: <input type="text" maxlength="10" id="txtEndDate" style="width: 25%;" > </div>
+			<div id="atualizarTela">
+				<div id="reload"  class="bg_botaoBarraTopoAtualizar"><a  href="#" title=""><img style="border:none;" src="imagens/icone_botaoAtualizar.png" width="30" height="30" /></a></div>
+			</div>
+			<div id="admOcorrencias">
+	          <div class="bg_botaoBarraTopo"><a   onclick="fullWindow('../pages/dashboard.xhtml','ocorrencia',1);" href="#" title=""><img style="border:none;" src="imagens/icone_adm_ocorrencias.png" width="21" height="21"/>Administrar Ocorrências</a>
+	          </div>
+	          </div>
+			<div class="sair" id="sair">Sair</div>
+		</div>
+		<!--Topo Fim-->
+		<!--Conteúdo Início-->
+		<div id="abas">
+			<div class="mapaSelec" id="opcao1">Mapas</div>
+			<a id="btnGrafico"><div class="graficoNSelec" title="Gáficos" id="opcao2"></div></a>
+		</div>
+		<div id="conteudo">
+			<div id="areaMapa">
+				<div id="barraTituloMapa">
+					<div id="textoTMapa">Mapeamento Teste - Ocorrências Pendentes</div>
+					<!-- 
+					<div id="botaoTransalvador"><p style="margin-top: 0px;">
+						<a id="botaoTransalvadorA" select="true" class="botaoTransalvadorA" href="#" title="">Transalvador</a>
+					</p></div>
+					<div id="botaoSucom" ><p style="margin-top: 0px;">
+						<a id="botaoSucomA" select="false" class="botaoSucomA" href="#" title="">Sucom</a>
+					</p></div>
+					 -->
+				</div>
+				<div id=conteudoMapa>
+					<div id="map-canvas" style="width: 100%; height: 100%;"></div>
+				</div>
+				<div id="legendaMapa">
+					<div id="legendaBairro">Região:</div>
+					<div id="menuSelecaoBairro">
+						<select id="selecaoBairro" name="selecaoBairro" dir="ltr" lang="pt">     
+						</select>
+					</div>
+					
+					<div id="menuDrawingPolygon" drawing="true">
+						<img style="width: 30px;" src="imagens/on_polygon.png" alt="Desenhar área no mapa" title="Desenhar área no mapa"/>
+					</div>
+					
+					<div id="legendaTipoOcorrencia">Categoria:</div>
+					<div id="menuSelecaoTipoOcorrencia">
+						<select id="selecaoTipoOcorrencia" name="selecaoTipoOcorrencia" dir="ltr" lang="pt">     
+						</select>
+					</div>
+					
+					<div id="legendaTitulo2">Legenda:</div>
+					<div id="legendaConteudo">
+						<div id="imagemLegendaOpcaoPendentes"><img src="imagens/map_pendentes.png" alt="Ocorências Pendentes" width="30" height="30" /></div>
+						<div class="textoLegendaMapa" id="textoLegendaOpcaoPendentes">Pendentes</div>
+					</div>
+				</div>
+			</div>
+			<!--Conteúdo seleção da visualização de ocorrências-->
+			<div id="visualizacaoOcorrencias">
+				<div id="visualizacaoOTexto">Selecione as visualizações das ocorrências:</div>
+				<div id="botaoOPendentes">
+				<div id="numeroPendentesMap"></div>
+					<p>
+						<a id="botaoPendenteA" select="true" class="botaoPendenteA" href="#" title="">Pendentes</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoOAceitas">
+				<div class="numeroDemaisOcorrenciasMap" id="numeroAceitasMap"></div>
+					<p>
+						<a id="botaoAceitaA" select="false" class="botaoAceitaA" href="#" title="Aceitas">Aceitas</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoOResolvidas">
+				<div class="numeroDemaisOcorrenciasMap" id="numeroResolvidasMap"></div>
+					<p>
+						<a id="botaoResolvidaA" select="false" class="botaoResolvidaA" href="#" title="Resolvidas">Resolvidas</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoORecusadas">
+				<div class="numeroDemaisOcorrenciasMap" id="numeroRecusadasMap"></div>
+					<p>
+						<a id="botaoRecusadaA" select="false" class="botaoRecusadaA" href="#" title="Recusadas">Recusadas</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoOTodasCadUsuarios">
+					<p>
+						<a id="botaoTodasCadUsuarioA" select="false" class="botaoTodasCadUsuarioA" href="#" title="Por Cadastro de Usuários">Por usuários</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoOTodas">
+					<p class="bg_botaovisuOcorrencia_nSelec bg_botaovisuOcorrencia_selec">
+						<a id="botaoTodaA" select="false" class="botaoTodaA" href="#" title="Todas">Todas</a>
+					</p>
+				</div>
+				<div class="botaovisuOcorrencia" id="botaoStatusBairro">
+					<p class="bg_botaovisuOcorrencia_nSelec bg_botaovisuOcorrencia_selec">
+						<a id="botaoStatusBairroA" select="false" class="botaoStatusBairroA" href="#" title="Status bairro">Status bairro</a>
+					</p>
+				</div>
+			</div>
+			<!--Conteúdo Fim-->
+			<!--Rodapé Início-->
+			<div id="rodape">
+				<span> Dashboard Prefeitura de Salvador | Login 2013 </span>
+			</div>
+			<!--Rodapé Fim-->
+		</div>
+</body>
+</html>

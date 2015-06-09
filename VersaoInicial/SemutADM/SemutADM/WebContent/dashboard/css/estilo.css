@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+body {
+	background-image: url(../imagens/bg4-1.jpg);
+	background-repeat: repeat;
+
+	
+}
+
+#barraTopo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	background-color: #33558C;
+	text-align: center;
+	vertical-align: bottom;
+	letter-spacing: normal;
+	word-spacing: normal;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #FFF;
+	line-height: 50px;
+}
+#barraTopo2 #localData {
+	background-color: #CCD5E2;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: #33558C;
+	text-indent:5px;
+
+}
+#usuario {
+	background-color: #7D86AE;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: #1A2B46;
+	text-indent:5px;
+	text-align: center;
+}
+
+#admOcorrencias {
+	background-color: #5C6C9C;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: #FFFFFF;
+	text-indent:5px;
+
+}
+#sair {
+	background-color: #4F5B80;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: #FFFFFF;
+	text-indent:5px;
+}
+#opcao1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #233a5f;
+	text-indent: 35px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #a0a4c3;
+	text-align: left;
+}
+
+#opcao2 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #233A5F;
+	text-align: center;
+	text-indent: 35px;
+}
+
+.mapaSelec {
+	background-image: url(../imagens/icone_mapa_selec.png);
+	background-repeat:no-repeat;
+	background-position: 3px;
+
+}
+
+
+.mapaNSelec {
+	background-image: url(../imagens/icone_mapa_n_selec.png);
+	background-repeat:no-repeat;
+	background-position: 3px;
+
+}
+
+.graficoSelec {
+	background-image: url(../imagens/icone_grafico_selec.png);
+	background-repeat:no-repeat;
+	background-position: center;
+
+}
+
+.graficoNSelec {
+	background-image: url(../imagens/icone_grafico_n_selec.png);
+	background-repeat:no-repeat;
+	background-position: center;
+
+}
+
+.sair {
+	background-image: url(../imagens/icone_sair.png);
+	background-repeat:no-repeat;
+	background-position: 40px;
+
+}
+
+.admOcorrencias {
+	background-image: url(../imagens/icone_adm_ocorrencias.png);
+	background-repeat:no-repeat;
+	background-position: 30px;
+
+}
+
+#visualizacaoOcorrencias #visualizacaoOTexto {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #33558C;
+	font-size: 11px;
+	line-height: normal;
+	background-color: #a0a4c3;
+	text-align: center;
+	text-indent: 3px;
+}
+
+#visualizacaoOcorrencias #botaoOPendentes {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 35px;
+	text-indent: 45px;
+	
+}
+#visualizacaoOcorrencias #botaoOPendentes #descricaoPendentes {
+		font-size: 12px;
+		margin-left:0;
+		text-indent:0;
+
+}
+
+
+.botaovisuOcorrencia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFF;
+	list-style-type:none;
+	list-style-position: outside;
+	background-image:url(../imagens/bg_botaovisuOcorrencia.png);
+	display:block;
+}
+
+
+
+.botaoOPendentes {
+	background-image: url(../imagens/bg_botaoOPendentes_selec.png);
+
+}
+
+
+#areaMapa #barraTituloMapa #textoTMapa {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+	background-color: #33558c;
+	text-indent: 0;
+	line-height: 24px;
+	background-image: url(../imagens/bg_barrasTitulo.png);
+	background-repeat: repeat-x;
+	font-weight: bold;
+}
+
+#areaMapa #legendaMapa {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #33558c;
+	background-color: #d0d2d3;
+	line-height: 30px;
+	text-indent: 5px;
+	
+
+}#areaMapa #legendaMapa #legendaTitulo {
+	background-color: #FFF;
+}
+
+#rodape {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #33558c;
+	text-align: right;
+	background-color: #A6A8AB;
+
+}
+
+#geral #rodape span {
+	margin-right: 5px;
+}
+
+
+.textoLegendaMapa {
+	text-align: left;
+}

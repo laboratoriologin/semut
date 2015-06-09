@@ -1,0 +1,1141 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F69F5E3955F47458349F518 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 208A0FA18AA54367A3CD13EA /* libPods.a */; };
+		62028E6718F6CA9A00726562 /* icone_check_enviado.png in Resources */ = {isa = PBXBuildFile; fileRef = 62028E6518F6CA9A00726562 /* icone_check_enviado.png */; };
+		62028E6818F6CA9A00726562 /* icone_enviando.png in Resources */ = {isa = PBXBuildFile; fileRef = 62028E6618F6CA9A00726562 /* icone_enviando.png */; };
+		6207E1CE184764790093D0AA /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6207E1CD184764790093D0AA /* placeholder.jpg */; };
+		6207E1D1184770F80093D0AA /* bt_cadastro_usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = 6207E1CF184770F80093D0AA /* bt_cadastro_usuario.png */; };
+		6207E1D2184770F80093D0AA /* bt_normas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6207E1D0184770F80093D0AA /* bt_normas.png */; };
+		6207E1D5184773E00093D0AA /* SENormasController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6207E1D4184773E00093D0AA /* SENormasController.m */; };
+		6207E1D818477CD40093D0AA /* SECadastroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6207E1D718477CD40093D0AA /* SECadastroController.m */; };
+		621145D618F5CB5F0080E518 /* SEOcorrenciaBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 621145D518F5CB5F0080E518 /* SEOcorrenciaBS.m */; };
+		622EAC3D1864BE170065B6B3 /* SERegistro.m in Sources */ = {isa = PBXBuildFile; fileRef = 622EAC3C1864BE170065B6B3 /* SERegistro.m */; };
+		623550D4186343CB00156924 /* SENoticiaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 623550D3186343CB00156924 /* SENoticiaDAO.m */; };
+		623550D71863626900156924 /* SEMeusRegistrosController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623550D61863626900156924 /* SEMeusRegistrosController.m */; };
+		623A7782184F8CDC00C09171 /* SECategoriaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 623A7781184F8CDC00C09171 /* SECategoriaDAO.m */; };
+		623A7785184F8CF200C09171 /* SEDBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 623A7784184F8CF200C09171 /* SEDBUtil.m */; };
+		623C8CB2186318BB008FD952 /* bt_compartilhar_transalvador.png in Resources */ = {isa = PBXBuildFile; fileRef = 623C8CAE186318BB008FD952 /* bt_compartilhar_transalvador.png */; };
+		623C8CB3186318BB008FD952 /* bt_compartilhar_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 623C8CAF186318BB008FD952 /* bt_compartilhar_sucom.png */; };
+		623C8CB4186318BB008FD952 /* bt_salvar_transalvador.png in Resources */ = {isa = PBXBuildFile; fileRef = 623C8CB0186318BB008FD952 /* bt_salvar_transalvador.png */; };
+		623C8CB5186318BB008FD952 /* bt_salvar_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 623C8CB1186318BB008FD952 /* bt_salvar_sucom.png */; };
+		623C8CB718632104008FD952 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623C8CB618632104008FD952 /* Social.framework */; };
+		623F78FD1844F2C50095BB10 /* SEMarcacaoMapaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F78FC1844F2C50095BB10 /* SEMarcacaoMapaController.m */; };
+		623F78FF1844F3970095BB10 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623F78FE1844F3970095BB10 /* MapKit.framework */; };
+		623F790218450DDC0095BB10 /* SEAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F790118450DDC0095BB10 /* SEAnnotation.m */; };
+		623F7905184512550095BB10 /* SEOcorrencia.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F7904184512550095BB10 /* SEOcorrencia.m */; };
+		623F7908184512D40095BB10 /* SEConclusaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F7907184512D40095BB10 /* SEConclusaoController.m */; };
+		6246679718685F0600583BBA /* bt_excluir_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679518685F0600583BBA /* bt_excluir_sucom.png */; };
+		6246679818685F0600583BBA /* bt_excluir.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679618685F0600583BBA /* bt_excluir.png */; };
+		6246679F1868989000583BBA /* bt_compartilhar_transalvador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 624667991868989000583BBA /* bt_compartilhar_transalvador@2x.png */; };
+		624667A01868989000583BBA /* bt_excluir@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679A1868989000583BBA /* bt_excluir@2x.png */; };
+		624667A11868989000583BBA /* bt_excluir_sucom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679B1868989000583BBA /* bt_excluir_sucom@2x.png */; };
+		624667A21868989000583BBA /* bt_salvar_transalvador@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679C1868989000583BBA /* bt_salvar_transalvador@2x.png */; };
+		624667A31868989000583BBA /* bt_salvar_sucom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679D1868989000583BBA /* bt_salvar_sucom@2x.png */; };
+		624667A41868989000583BBA /* bt_compartilhar_sucom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6246679E1868989000583BBA /* bt_compartilhar_sucom@2x.png */; };
+		624A1FAD1852389E00CE09F8 /* SEOcorrenciaDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 624A1FAC1852389E00CE09F8 /* SEOcorrenciaDAO.m */; };
+		624BAB89183FE10100F7381A /* bt_home_configuracoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 624BAB85183FE10100F7381A /* bt_home_configuracoes.png */; };
+		624BAB8A183FE10100F7381A /* bt_home_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 624BAB86183FE10100F7381A /* bt_home_sucom.png */; };
+		624BAB8B183FE10100F7381A /* bt_home_tel_uteis.png in Resources */ = {isa = PBXBuildFile; fileRef = 624BAB87183FE10100F7381A /* bt_home_tel_uteis.png */; };
+		624BAB8C183FE10100F7381A /* bt_home_transalvador.png in Resources */ = {isa = PBXBuildFile; fileRef = 624BAB88183FE10100F7381A /* bt_home_transalvador.png */; };
+		62580E7D183F81B500361625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E7C183F81B500361625 /* Foundation.framework */; };
+		62580E7F183F81B500361625 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E7E183F81B500361625 /* CoreGraphics.framework */; };
+		62580E81183F81B500361625 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E80183F81B500361625 /* UIKit.framework */; };
+		62580E87183F81B500361625 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62580E85183F81B500361625 /* InfoPlist.strings */; };
+		62580E89183F81B500361625 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62580E88183F81B500361625 /* main.m */; };
+		62580E8D183F81B500361625 /* SEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62580E8C183F81B500361625 /* SEAppDelegate.m */; };
+		62580E90183F81B500361625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62580E8E183F81B500361625 /* Main.storyboard */; };
+		62580E93183F81B500361625 /* SEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62580E92183F81B500361625 /* SEViewController.m */; };
+		62580E95183F81B500361625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62580E94183F81B500361625 /* Images.xcassets */; };
+		62580E9C183F81B500361625 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E9B183F81B500361625 /* XCTest.framework */; };
+		62580E9D183F81B500361625 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E7C183F81B500361625 /* Foundation.framework */; };
+		62580E9E183F81B500361625 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62580E80183F81B500361625 /* UIKit.framework */; };
+		62580EA6183F81B500361625 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62580EA4183F81B500361625 /* InfoPlist.strings */; };
+		62580EA8183F81B500361625 /* semutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62580EA7183F81B500361625 /* semutTests.m */; };
+		62580EB5183F872900361625 /* bt_alerta.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EB2183F872900361625 /* bt_alerta.png */; };
+		62580EB6183F872900361625 /* bt_educacao_transito.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EB3183F872900361625 /* bt_educacao_transito.png */; };
+		62580EB7183F872900361625 /* bt_registro_ocorrencia.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EB4183F872900361625 /* bt_registro_ocorrencia.png */; };
+		62580EBB183F8CF400361625 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EB8183F8CF400361625 /* Default-568h@2x.png */; };
+		62580EBC183F8CF400361625 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EB9183F8CF400361625 /* Default.png */; };
+		62580EBD183F8CF400361625 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EBA183F8CF400361625 /* Default@2x.png */; };
+		62580EC1183FB80400361625 /* bt_fale_com_transalvador.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EBE183FB80400361625 /* bt_fale_com_transalvador.png */; };
+		62580EC2183FB80400361625 /* bt_meus_registros.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EBF183FB80400361625 /* bt_meus_registros.png */; };
+		62580EC3183FB80400361625 /* bt_noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC0183FB80400361625 /* bt_noticias.png */; };
+		62580ECE183FBDC400361625 /* icon-btconfg_cadastro.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC4183FBDC400361625 /* icon-btconfg_cadastro.png */; };
+		62580ECF183FBDC400361625 /* icon-btconfg_normas_uso.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC5183FBDC400361625 /* icon-btconfg_normas_uso.png */; };
+		62580ED0183FBDC400361625 /* icon-btsucom_polu_sonora.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC6183FBDC400361625 /* icon-btsucom_polu_sonora.png */; };
+		62580ED1183FBDC400361625 /* icon-btsucom_qua_aviso.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC7183FBDC400361625 /* icon-btsucom_qua_aviso.png */; };
+		62580ED2183FBDC400361625 /* icon-bttrans_alertas.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC8183FBDC400361625 /* icon-bttrans_alertas.png */; };
+		62580ED3183FBDC400361625 /* icon-bttrans_edu_no_tran.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EC9183FBDC400361625 /* icon-bttrans_edu_no_tran.png */; };
+		62580ED4183FBDC400361625 /* icon-bttrans_fale_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580ECA183FBDC400361625 /* icon-bttrans_fale_trans.png */; };
+		62580ED5183FBDC400361625 /* icon-bttrans_meus_regis.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580ECB183FBDC400361625 /* icon-bttrans_meus_regis.png */; };
+		62580ED6183FBDC400361625 /* icon-bttrans_noticias.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580ECC183FBDC400361625 /* icon-bttrans_noticias.png */; };
+		62580ED7183FBDC400361625 /* icon-bttrans_Reg_de_ocor.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580ECD183FBDC400361625 /* icon-bttrans_Reg_de_ocor.png */; };
+		62580EE3183FD88200361625 /* logo_semut.png in Resources */ = {isa = PBXBuildFile; fileRef = 62580EE2183FD88200361625 /* logo_semut.png */; };
+		625B090E184CE0880031A3C3 /* bt_alo_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B0909184CE0880031A3C3 /* bt_alo_sucom.png */; };
+		625B090F184CE0880031A3C3 /* bt_meus_registros_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B090A184CE0880031A3C3 /* bt_meus_registros_sucom.png */; };
+		625B0910184CE0880031A3C3 /* bt_poluicao_sonora.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B090B184CE0880031A3C3 /* bt_poluicao_sonora.png */; };
+		625B0911184CE0880031A3C3 /* bt_quadro_avisos.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B090C184CE0880031A3C3 /* bt_quadro_avisos.png */; };
+		625B0912184CE0880031A3C3 /* bt_registro_ocorrencia_sucom.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B090D184CE0880031A3C3 /* bt_registro_ocorrencia_sucom.png */; };
+		625B0914184D02E20031A3C3 /* dotted.png in Resources */ = {isa = PBXBuildFile; fileRef = 625B0913184D02E20031A3C3 /* dotted.png */; };
+		6263183D185A295B00BE8D8D /* SEUsuarioBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6263183C185A295B00BE8D8D /* SEUsuarioBS.m */; };
+		627ABC44185F29AD006147B6 /* SETableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627ABC43185F29AD006147B6 /* SETableViewCell.xib */; };
+		627ABC46185F2E19006147B6 /* SETableViewImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627ABC45185F2E19006147B6 /* SETableViewImageCell.xib */; };
+		627ABC49185F2ECF006147B6 /* SETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627ABC48185F2ECF006147B6 /* SETableViewCell.m */; };
+		627ABC4C185F2EDC006147B6 /* SETableViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627ABC4B185F2EDC006147B6 /* SETableViewImageCell.m */; };
+		6280151218577C3F0080665A /* SEAlertaBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6280151118577C3F0080665A /* SEAlertaBS.m */; };
+		62801518185784450080665A /* SEAlertasController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62801517185784450080665A /* SEAlertasController.m */; };
+		62850CD2184375B500A3D0BF /* SERegistroOcorrenciaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62850CD1184375B500A3D0BF /* SERegistroOcorrenciaController.m */; };
+		62850CD71843795700A3D0BF /* SECategoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 62850CD61843795700A3D0BF /* SECategoria.m */; };
+		62850CDB18437AD200A3D0BF /* SECategoriaBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 62850CDA18437AD200A3D0BF /* SECategoriaBS.m */; };
+		62850CDE18437BE100A3D0BF /* SECategoriasController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62850CDD18437BE100A3D0BF /* SECategoriasController.m */; };
+		628A1A1E1848F52700C6EF95 /* SEDetalheNoticiaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A1A1D1848F52700C6EF95 /* SEDetalheNoticiaController.m */; };
+		62A7DA651846172C00C7E881 /* SEUsuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7DA641846172C00C7E881 /* SEUsuario.m */; };
+		62A7DA681846213B00C7E881 /* SENoticiaBS.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7DA671846213B00C7E881 /* SENoticiaBS.m */; };
+		62A7DA6B1846219000C7E881 /* SENoticia.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7DA6A1846219000C7E881 /* SENoticia.m */; };
+		62A7DA6E1846293500C7E881 /* SENoticiaController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7DA6D1846293500C7E881 /* SENoticiaController.m */; };
+		62A7DA72184673B900C7E881 /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A7DA71184673B900C7E881 /* IconDownloader.m */; };
+		62E20ABC18F57C5E008B90A8 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E20ABB18F57C5E008B90A8 /* Reachability.m */; };
+		62EB81A41843B8C50023E192 /* SEUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EB81A31843B8C50023E192 /* SEUtil.m */; };
+		62EB81AC1843BFFD0023E192 /* ic_excluir.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81AA1843BFFD0023E192 /* ic_excluir.png */; };
+		62EB81AF1843C0690023E192 /* ic_excluir@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81AE1843C0690023E192 /* ic_excluir@2x.png */; };
+		62EB81C11843C1E60023E192 /* bar_tel_configuracoes_320x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B11843C1E60023E192 /* bar_tel_configuracoes_320x44.png */; };
+		62EB81C21843C1E60023E192 /* bar_tel_configuracoes_320x44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B21843C1E60023E192 /* bar_tel_configuracoes_320x44@2x.png */; };
+		62EB81C31843C1E60023E192 /* bar_tel_configuracoes_320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B31843C1E60023E192 /* bar_tel_configuracoes_320x64.png */; };
+		62EB81C41843C1E60023E192 /* bar_tel_configuracoes_320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B41843C1E60023E192 /* bar_tel_configuracoes_320x64@2x.png */; };
+		62EB81C51843C1E60023E192 /* bar_tel_uteis_320x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B51843C1E60023E192 /* bar_tel_uteis_320x44.png */; };
+		62EB81C61843C1E60023E192 /* bar_tel_uteis_320x44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B61843C1E60023E192 /* bar_tel_uteis_320x44@2x.png */; };
+		62EB81C71843C1E60023E192 /* bar_tel_uteis_320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B71843C1E60023E192 /* bar_tel_uteis_320x64.png */; };
+		62EB81C81843C1E60023E192 /* bar_tel_uteis_320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B81843C1E60023E192 /* bar_tel_uteis_320x64@2x.png */; };
+		62EB81C91843C1E60023E192 /* bar_topo_sucom_320x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81B91843C1E60023E192 /* bar_topo_sucom_320x44.png */; };
+		62EB81CA1843C1E60023E192 /* bar_topo_sucom_320x44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BA1843C1E60023E192 /* bar_topo_sucom_320x44@2x.png */; };
+		62EB81CB1843C1E60023E192 /* bar_topo_sucom_320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BB1843C1E60023E192 /* bar_topo_sucom_320x64.png */; };
+		62EB81CC1843C1E60023E192 /* bar_topo_sucom_320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BC1843C1E60023E192 /* bar_topo_sucom_320x64@2x.png */; };
+		62EB81CD1843C1E60023E192 /* bar_transalvador_320x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BD1843C1E60023E192 /* bar_transalvador_320x44.png */; };
+		62EB81CE1843C1E60023E192 /* bar_transalvador_320x44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BE1843C1E60023E192 /* bar_transalvador_320x44@2x.png */; };
+		62EB81CF1843C1E60023E192 /* bar_transalvador_320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81BF1843C1E60023E192 /* bar_transalvador_320x64.png */; };
+		62EB81D01843C1E60023E192 /* bar_transalvador_320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81C01843C1E60023E192 /* bar_transalvador_320x64@2x.png */; };
+		62EB81D31843C2BF0023E192 /* SEMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EB81D21843C2BF0023E192 /* SEMenuController.m */; };
+		62EB81DA1843D0410023E192 /* launcher_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81D51843D0410023E192 /* launcher_29.png */; };
+		62EB81DB1843D0410023E192 /* launcher_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81D61843D0410023E192 /* launcher_57.png */; };
+		62EB81DC1843D0410023E192 /* launcher_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81D71843D0410023E192 /* launcher_58.png */; };
+		62EB81DD1843D0410023E192 /* launcher_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81D81843D0410023E192 /* launcher_114.png */; };
+		62EB81DE1843D0410023E192 /* launcher_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81D91843D0410023E192 /* launcher_120.png */; };
+		62EB81E01843D0C50023E192 /* launcher_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EB81DF1843D0C50023E192 /* launcher_80.png */; };
+		62EC083F184F8B76004C4A81 /* semut.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 62EC083E184F8B76004C4A81 /* semut.sqlite */; };
+		62F15B1B1850D87300332CD0 /* SEMenuSucomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F15B1A1850D87300332CD0 /* SEMenuSucomController.m */; };
+		62F15B201850F9A100332CD0 /* iconeTU_ambulancia.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F15B1C1850F9A100332CD0 /* iconeTU_ambulancia.png */; };
+		62F15B211850F9A100332CD0 /* iconeTU_bombeiros.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F15B1D1850F9A100332CD0 /* iconeTU_bombeiros.png */; };
+		62F15B221850F9A100332CD0 /* iconeTU_defesa_civil.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F15B1E1850F9A100332CD0 /* iconeTU_defesa_civil.png */; };
+		62F15B231850F9A100332CD0 /* iconeTU_policia_militar.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F15B1F1850F9A100332CD0 /* iconeTU_policia_militar.png */; };
+		62F15B251850FA6200332CD0 /* icone_ligar.png in Resources */ = {isa = PBXBuildFile; fileRef = 62F15B241850FA6200332CD0 /* icone_ligar.png */; };
+		62F15B281850FD5700332CD0 /* SETelefonesUteisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F15B271850FD5700332CD0 /* SETelefonesUteisController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62580E9F183F81B500361625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62580E71183F81B500361625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62580E78183F81B500361625;
+			remoteInfo = semut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		208A0FA18AA54367A3CD13EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62028E6518F6CA9A00726562 /* icone_check_enviado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_check_enviado.png; sourceTree = "<group>"; };
+		62028E6618F6CA9A00726562 /* icone_enviando.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_enviando.png; sourceTree = "<group>"; };
+		6207E1CD184764790093D0AA /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		6207E1CF184770F80093D0AA /* bt_cadastro_usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_cadastro_usuario.png; sourceTree = "<group>"; };
+		6207E1D0184770F80093D0AA /* bt_normas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_normas.png; sourceTree = "<group>"; };
+		6207E1D3184773E00093D0AA /* SENormasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENormasController.h; sourceTree = "<group>"; };
+		6207E1D4184773E00093D0AA /* SENormasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENormasController.m; sourceTree = "<group>"; };
+		6207E1D618477CD40093D0AA /* SECadastroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECadastroController.h; sourceTree = "<group>"; };
+		6207E1D718477CD40093D0AA /* SECadastroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECadastroController.m; sourceTree = "<group>"; };
+		621145D418F5CB5F0080E518 /* SEOcorrenciaBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEOcorrenciaBS.h; sourceTree = "<group>"; };
+		621145D518F5CB5F0080E518 /* SEOcorrenciaBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEOcorrenciaBS.m; sourceTree = "<group>"; };
+		622EAC3B1864BE170065B6B3 /* SERegistro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SERegistro.h; sourceTree = "<group>"; };
+		622EAC3C1864BE170065B6B3 /* SERegistro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SERegistro.m; sourceTree = "<group>"; };
+		623550D2186343CB00156924 /* SENoticiaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENoticiaDAO.h; sourceTree = "<group>"; };
+		623550D3186343CB00156924 /* SENoticiaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENoticiaDAO.m; sourceTree = "<group>"; };
+		623550D51863626900156924 /* SEMeusRegistrosController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEMeusRegistrosController.h; sourceTree = "<group>"; };
+		623550D61863626900156924 /* SEMeusRegistrosController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEMeusRegistrosController.m; sourceTree = "<group>"; };
+		623A7780184F8CDC00C09171 /* SECategoriaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECategoriaDAO.h; sourceTree = "<group>"; };
+		623A7781184F8CDC00C09171 /* SECategoriaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECategoriaDAO.m; sourceTree = "<group>"; };
+		623A7783184F8CF200C09171 /* SEDBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEDBUtil.h; sourceTree = "<group>"; };
+		623A7784184F8CF200C09171 /* SEDBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDBUtil.m; sourceTree = "<group>"; };
+		623C8CAE186318BB008FD952 /* bt_compartilhar_transalvador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_compartilhar_transalvador.png; sourceTree = "<group>"; };
+		623C8CAF186318BB008FD952 /* bt_compartilhar_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_compartilhar_sucom.png; sourceTree = "<group>"; };
+		623C8CB0186318BB008FD952 /* bt_salvar_transalvador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_salvar_transalvador.png; sourceTree = "<group>"; };
+		623C8CB1186318BB008FD952 /* bt_salvar_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_salvar_sucom.png; sourceTree = "<group>"; };
+		623C8CB618632104008FD952 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		623F78FB1844F2C50095BB10 /* SEMarcacaoMapaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEMarcacaoMapaController.h; sourceTree = "<group>"; };
+		623F78FC1844F2C50095BB10 /* SEMarcacaoMapaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEMarcacaoMapaController.m; sourceTree = "<group>"; };
+		623F78FE1844F3970095BB10 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		623F790018450DDC0095BB10 /* SEAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEAnnotation.h; sourceTree = "<group>"; };
+		623F790118450DDC0095BB10 /* SEAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEAnnotation.m; sourceTree = "<group>"; };
+		623F7903184512550095BB10 /* SEOcorrencia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEOcorrencia.h; sourceTree = "<group>"; };
+		623F7904184512550095BB10 /* SEOcorrencia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEOcorrencia.m; sourceTree = "<group>"; };
+		623F7906184512D40095BB10 /* SEConclusaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEConclusaoController.h; sourceTree = "<group>"; };
+		623F7907184512D40095BB10 /* SEConclusaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEConclusaoController.m; sourceTree = "<group>"; };
+		6246679518685F0600583BBA /* bt_excluir_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_excluir_sucom.png; sourceTree = "<group>"; };
+		6246679618685F0600583BBA /* bt_excluir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_excluir.png; sourceTree = "<group>"; };
+		624667991868989000583BBA /* bt_compartilhar_transalvador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_compartilhar_transalvador@2x.png"; sourceTree = "<group>"; };
+		6246679A1868989000583BBA /* bt_excluir@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_excluir@2x.png"; sourceTree = "<group>"; };
+		6246679B1868989000583BBA /* bt_excluir_sucom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_excluir_sucom@2x.png"; sourceTree = "<group>"; };
+		6246679C1868989000583BBA /* bt_salvar_transalvador@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_salvar_transalvador@2x.png"; sourceTree = "<group>"; };
+		6246679D1868989000583BBA /* bt_salvar_sucom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_salvar_sucom@2x.png"; sourceTree = "<group>"; };
+		6246679E1868989000583BBA /* bt_compartilhar_sucom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_compartilhar_sucom@2x.png"; sourceTree = "<group>"; };
+		624A1FAB1852389E00CE09F8 /* SEOcorrenciaDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEOcorrenciaDAO.h; sourceTree = "<group>"; };
+		624A1FAC1852389E00CE09F8 /* SEOcorrenciaDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEOcorrenciaDAO.m; sourceTree = "<group>"; };
+		624BAB85183FE10100F7381A /* bt_home_configuracoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_home_configuracoes.png; sourceTree = "<group>"; };
+		624BAB86183FE10100F7381A /* bt_home_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_home_sucom.png; sourceTree = "<group>"; };
+		624BAB87183FE10100F7381A /* bt_home_tel_uteis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_home_tel_uteis.png; sourceTree = "<group>"; };
+		624BAB88183FE10100F7381A /* bt_home_transalvador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_home_transalvador.png; sourceTree = "<group>"; };
+		62580E79183F81B500361625 /* semut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = semut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62580E7C183F81B500361625 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		62580E7E183F81B500361625 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		62580E80183F81B500361625 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		62580E84183F81B500361625 /* semut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semut-Info.plist"; sourceTree = "<group>"; };
+		62580E86183F81B500361625 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		62580E88183F81B500361625 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62580E8A183F81B500361625 /* semut-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "semut-Prefix.pch"; sourceTree = "<group>"; };
+		62580E8B183F81B500361625 /* SEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEAppDelegate.h; sourceTree = "<group>"; };
+		62580E8C183F81B500361625 /* SEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEAppDelegate.m; sourceTree = "<group>"; };
+		62580E8F183F81B500361625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62580E91183F81B500361625 /* SEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEViewController.h; sourceTree = "<group>"; };
+		62580E92183F81B500361625 /* SEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEViewController.m; sourceTree = "<group>"; };
+		62580E94183F81B500361625 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		62580E9A183F81B500361625 /* semutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = semutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62580E9B183F81B500361625 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		62580EA3183F81B500361625 /* semutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "semutTests-Info.plist"; sourceTree = "<group>"; };
+		62580EA5183F81B500361625 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		62580EA7183F81B500361625 /* semutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = semutTests.m; sourceTree = "<group>"; };
+		62580EB2183F872900361625 /* bt_alerta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_alerta.png; sourceTree = "<group>"; };
+		62580EB3183F872900361625 /* bt_educacao_transito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_educacao_transito.png; sourceTree = "<group>"; };
+		62580EB4183F872900361625 /* bt_registro_ocorrencia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_registro_ocorrencia.png; sourceTree = "<group>"; };
+		62580EB8183F8CF400361625 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "semut/res/Default-568h@2x.png"; sourceTree = "<group>"; };
+		62580EB9183F8CF400361625 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = semut/res/Default.png; sourceTree = "<group>"; };
+		62580EBA183F8CF400361625 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "semut/res/Default@2x.png"; sourceTree = "<group>"; };
+		62580EBE183FB80400361625 /* bt_fale_com_transalvador.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_fale_com_transalvador.png; sourceTree = "<group>"; };
+		62580EBF183FB80400361625 /* bt_meus_registros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_meus_registros.png; sourceTree = "<group>"; };
+		62580EC0183FB80400361625 /* bt_noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_noticias.png; sourceTree = "<group>"; };
+		62580EC4183FBDC400361625 /* icon-btconfg_cadastro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-btconfg_cadastro.png"; sourceTree = "<group>"; };
+		62580EC5183FBDC400361625 /* icon-btconfg_normas_uso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-btconfg_normas_uso.png"; sourceTree = "<group>"; };
+		62580EC6183FBDC400361625 /* icon-btsucom_polu_sonora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-btsucom_polu_sonora.png"; sourceTree = "<group>"; };
+		62580EC7183FBDC400361625 /* icon-btsucom_qua_aviso.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-btsucom_qua_aviso.png"; sourceTree = "<group>"; };
+		62580EC8183FBDC400361625 /* icon-bttrans_alertas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_alertas.png"; sourceTree = "<group>"; };
+		62580EC9183FBDC400361625 /* icon-bttrans_edu_no_tran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_edu_no_tran.png"; sourceTree = "<group>"; };
+		62580ECA183FBDC400361625 /* icon-bttrans_fale_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_fale_trans.png"; sourceTree = "<group>"; };
+		62580ECB183FBDC400361625 /* icon-bttrans_meus_regis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_meus_regis.png"; sourceTree = "<group>"; };
+		62580ECC183FBDC400361625 /* icon-bttrans_noticias.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_noticias.png"; sourceTree = "<group>"; };
+		62580ECD183FBDC400361625 /* icon-bttrans_Reg_de_ocor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-bttrans_Reg_de_ocor.png"; sourceTree = "<group>"; };
+		62580EE2183FD88200361625 /* logo_semut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_semut.png; sourceTree = "<group>"; };
+		625B0909184CE0880031A3C3 /* bt_alo_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_alo_sucom.png; sourceTree = "<group>"; };
+		625B090A184CE0880031A3C3 /* bt_meus_registros_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_meus_registros_sucom.png; sourceTree = "<group>"; };
+		625B090B184CE0880031A3C3 /* bt_poluicao_sonora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_poluicao_sonora.png; sourceTree = "<group>"; };
+		625B090C184CE0880031A3C3 /* bt_quadro_avisos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_quadro_avisos.png; sourceTree = "<group>"; };
+		625B090D184CE0880031A3C3 /* bt_registro_ocorrencia_sucom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_registro_ocorrencia_sucom.png; sourceTree = "<group>"; };
+		625B0913184D02E20031A3C3 /* dotted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotted.png; sourceTree = "<group>"; };
+		6263183B185A295B00BE8D8D /* SEUsuarioBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEUsuarioBS.h; sourceTree = "<group>"; };
+		6263183C185A295B00BE8D8D /* SEUsuarioBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEUsuarioBS.m; sourceTree = "<group>"; };
+		627ABC43185F29AD006147B6 /* SETableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SETableViewCell.xib; sourceTree = "<group>"; };
+		627ABC45185F2E19006147B6 /* SETableViewImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SETableViewImageCell.xib; sourceTree = "<group>"; };
+		627ABC47185F2ECF006147B6 /* SETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETableViewCell.h; sourceTree = "<group>"; };
+		627ABC48185F2ECF006147B6 /* SETableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETableViewCell.m; sourceTree = "<group>"; };
+		627ABC4A185F2EDC006147B6 /* SETableViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETableViewImageCell.h; sourceTree = "<group>"; };
+		627ABC4B185F2EDC006147B6 /* SETableViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETableViewImageCell.m; sourceTree = "<group>"; };
+		6280151018577C3F0080665A /* SEAlertaBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEAlertaBS.h; sourceTree = "<group>"; };
+		6280151118577C3F0080665A /* SEAlertaBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEAlertaBS.m; sourceTree = "<group>"; };
+		62801516185784450080665A /* SEAlertasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEAlertasController.h; sourceTree = "<group>"; };
+		62801517185784450080665A /* SEAlertasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEAlertasController.m; sourceTree = "<group>"; };
+		62850CD0184375B500A3D0BF /* SERegistroOcorrenciaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SERegistroOcorrenciaController.h; sourceTree = "<group>"; };
+		62850CD1184375B500A3D0BF /* SERegistroOcorrenciaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SERegistroOcorrenciaController.m; sourceTree = "<group>"; };
+		62850CD51843795700A3D0BF /* SECategoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECategoria.h; sourceTree = "<group>"; };
+		62850CD61843795700A3D0BF /* SECategoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECategoria.m; sourceTree = "<group>"; };
+		62850CD918437AD200A3D0BF /* SECategoriaBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECategoriaBS.h; sourceTree = "<group>"; };
+		62850CDA18437AD200A3D0BF /* SECategoriaBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECategoriaBS.m; sourceTree = "<group>"; };
+		62850CDC18437BE100A3D0BF /* SECategoriasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECategoriasController.h; sourceTree = "<group>"; };
+		62850CDD18437BE100A3D0BF /* SECategoriasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECategoriasController.m; sourceTree = "<group>"; };
+		628A1A1C1848F52700C6EF95 /* SEDetalheNoticiaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEDetalheNoticiaController.h; sourceTree = "<group>"; };
+		628A1A1D1848F52700C6EF95 /* SEDetalheNoticiaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEDetalheNoticiaController.m; sourceTree = "<group>"; };
+		62A7DA631846172C00C7E881 /* SEUsuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEUsuario.h; sourceTree = "<group>"; };
+		62A7DA641846172C00C7E881 /* SEUsuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEUsuario.m; sourceTree = "<group>"; };
+		62A7DA661846213B00C7E881 /* SENoticiaBS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENoticiaBS.h; sourceTree = "<group>"; };
+		62A7DA671846213B00C7E881 /* SENoticiaBS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENoticiaBS.m; sourceTree = "<group>"; };
+		62A7DA691846219000C7E881 /* SENoticia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENoticia.h; sourceTree = "<group>"; };
+		62A7DA6A1846219000C7E881 /* SENoticia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENoticia.m; sourceTree = "<group>"; };
+		62A7DA6C1846293500C7E881 /* SENoticiaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SENoticiaController.h; sourceTree = "<group>"; };
+		62A7DA6D1846293500C7E881 /* SENoticiaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SENoticiaController.m; sourceTree = "<group>"; };
+		62A7DA70184673B900C7E881 /* IconDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloader.h; sourceTree = "<group>"; };
+		62A7DA71184673B900C7E881 /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
+		62E20ABA18F57C5E008B90A8 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		62E20ABB18F57C5E008B90A8 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		62EB81A21843B8C50023E192 /* SEUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEUtil.h; sourceTree = "<group>"; };
+		62EB81A31843B8C50023E192 /* SEUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEUtil.m; sourceTree = "<group>"; };
+		62EB81AA1843BFFD0023E192 /* ic_excluir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_excluir.png; sourceTree = "<group>"; };
+		62EB81AE1843C0690023E192 /* ic_excluir@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_excluir@2x.png"; sourceTree = "<group>"; };
+		62EB81B11843C1E60023E192 /* bar_tel_configuracoes_320x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_tel_configuracoes_320x44.png; sourceTree = "<group>"; };
+		62EB81B21843C1E60023E192 /* bar_tel_configuracoes_320x44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_tel_configuracoes_320x44@2x.png"; sourceTree = "<group>"; };
+		62EB81B31843C1E60023E192 /* bar_tel_configuracoes_320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_tel_configuracoes_320x64.png; sourceTree = "<group>"; };
+		62EB81B41843C1E60023E192 /* bar_tel_configuracoes_320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_tel_configuracoes_320x64@2x.png"; sourceTree = "<group>"; };
+		62EB81B51843C1E60023E192 /* bar_tel_uteis_320x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_tel_uteis_320x44.png; sourceTree = "<group>"; };
+		62EB81B61843C1E60023E192 /* bar_tel_uteis_320x44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_tel_uteis_320x44@2x.png"; sourceTree = "<group>"; };
+		62EB81B71843C1E60023E192 /* bar_tel_uteis_320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_tel_uteis_320x64.png; sourceTree = "<group>"; };
+		62EB81B81843C1E60023E192 /* bar_tel_uteis_320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_tel_uteis_320x64@2x.png"; sourceTree = "<group>"; };
+		62EB81B91843C1E60023E192 /* bar_topo_sucom_320x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_topo_sucom_320x44.png; sourceTree = "<group>"; };
+		62EB81BA1843C1E60023E192 /* bar_topo_sucom_320x44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_topo_sucom_320x44@2x.png"; sourceTree = "<group>"; };
+		62EB81BB1843C1E60023E192 /* bar_topo_sucom_320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_topo_sucom_320x64.png; sourceTree = "<group>"; };
+		62EB81BC1843C1E60023E192 /* bar_topo_sucom_320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_topo_sucom_320x64@2x.png"; sourceTree = "<group>"; };
+		62EB81BD1843C1E60023E192 /* bar_transalvador_320x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_transalvador_320x44.png; sourceTree = "<group>"; };
+		62EB81BE1843C1E60023E192 /* bar_transalvador_320x44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_transalvador_320x44@2x.png"; sourceTree = "<group>"; };
+		62EB81BF1843C1E60023E192 /* bar_transalvador_320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_transalvador_320x64.png; sourceTree = "<group>"; };
+		62EB81C01843C1E60023E192 /* bar_transalvador_320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_transalvador_320x64@2x.png"; sourceTree = "<group>"; };
+		62EB81D11843C2BF0023E192 /* SEMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEMenuController.h; sourceTree = "<group>"; };
+		62EB81D21843C2BF0023E192 /* SEMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEMenuController.m; sourceTree = "<group>"; };
+		62EB81D51843D0410023E192 /* launcher_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_29.png; sourceTree = "<group>"; };
+		62EB81D61843D0410023E192 /* launcher_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_57.png; sourceTree = "<group>"; };
+		62EB81D71843D0410023E192 /* launcher_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_58.png; sourceTree = "<group>"; };
+		62EB81D81843D0410023E192 /* launcher_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_114.png; sourceTree = "<group>"; };
+		62EB81D91843D0410023E192 /* launcher_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_120.png; sourceTree = "<group>"; };
+		62EB81DF1843D0C50023E192 /* launcher_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcher_80.png; sourceTree = "<group>"; };
+		62EC083E184F8B76004C4A81 /* semut.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = semut.sqlite; sourceTree = "<group>"; };
+		62F15B191850D87300332CD0 /* SEMenuSucomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEMenuSucomController.h; sourceTree = "<group>"; };
+		62F15B1A1850D87300332CD0 /* SEMenuSucomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEMenuSucomController.m; sourceTree = "<group>"; };
+		62F15B1C1850F9A100332CD0 /* iconeTU_ambulancia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeTU_ambulancia.png; sourceTree = "<group>"; };
+		62F15B1D1850F9A100332CD0 /* iconeTU_bombeiros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeTU_bombeiros.png; sourceTree = "<group>"; };
+		62F15B1E1850F9A100332CD0 /* iconeTU_defesa_civil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeTU_defesa_civil.png; sourceTree = "<group>"; };
+		62F15B1F1850F9A100332CD0 /* iconeTU_policia_militar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeTU_policia_militar.png; sourceTree = "<group>"; };
+		62F15B241850FA6200332CD0 /* icone_ligar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icone_ligar.png; sourceTree = "<group>"; };
+		62F15B261850FD5700332CD0 /* SETelefonesUteisController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETelefonesUteisController.h; sourceTree = "<group>"; };
+		62F15B271850FD5700332CD0 /* SETelefonesUteisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETelefonesUteisController.m; sourceTree = "<group>"; };
+		D40E1DFD8A884F33B3F42EFB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62580E76183F81B500361625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				623C8CB718632104008FD952 /* Social.framework in Frameworks */,
+				623F78FF1844F3970095BB10 /* MapKit.framework in Frameworks */,
+				62580E7F183F81B500361625 /* CoreGraphics.framework in Frameworks */,
+				62580E81183F81B500361625 /* UIKit.framework in Frameworks */,
+				62580E7D183F81B500361625 /* Foundation.framework in Frameworks */,
+				3F69F5E3955F47458349F518 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62580E97183F81B500361625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62580E9C183F81B500361625 /* XCTest.framework in Frameworks */,
+				62580E9E183F81B500361625 /* UIKit.framework in Frameworks */,
+				62580E9D183F81B500361625 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		623A777F184F8CC300C09171 /* dao */ = {
+			isa = PBXGroup;
+			children = (
+				623A7780184F8CDC00C09171 /* SECategoriaDAO.h */,
+				623A7781184F8CDC00C09171 /* SECategoriaDAO.m */,
+				624A1FAB1852389E00CE09F8 /* SEOcorrenciaDAO.h */,
+				624A1FAC1852389E00CE09F8 /* SEOcorrenciaDAO.m */,
+				623550D2186343CB00156924 /* SENoticiaDAO.h */,
+				623550D3186343CB00156924 /* SENoticiaDAO.m */,
+			);
+			name = dao;
+			sourceTree = "<group>";
+		};
+		62580E70183F81B500361625 = {
+			isa = PBXGroup;
+			children = (
+				62580EB8183F8CF400361625 /* Default-568h@2x.png */,
+				62580EB9183F8CF400361625 /* Default.png */,
+				62580EBA183F8CF400361625 /* Default@2x.png */,
+				62580E82183F81B500361625 /* semut */,
+				62580EA1183F81B500361625 /* semutTests */,
+				62580E7B183F81B500361625 /* Frameworks */,
+				62580E7A183F81B500361625 /* Products */,
+				D40E1DFD8A884F33B3F42EFB /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		62580E7A183F81B500361625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62580E79183F81B500361625 /* semut.app */,
+				62580E9A183F81B500361625 /* semutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62580E7B183F81B500361625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				623C8CB618632104008FD952 /* Social.framework */,
+				623F78FE1844F3970095BB10 /* MapKit.framework */,
+				62580E7C183F81B500361625 /* Foundation.framework */,
+				62580E7E183F81B500361625 /* CoreGraphics.framework */,
+				62580E80183F81B500361625 /* UIKit.framework */,
+				62580E9B183F81B500361625 /* XCTest.framework */,
+				208A0FA18AA54367A3CD13EA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62580E82183F81B500361625 /* semut */ = {
+			isa = PBXGroup;
+			children = (
+				62E20AB918F57C46008B90A8 /* reachability */,
+				62EC083D184F8B76004C4A81 /* db */,
+				62EB81A51843BD380023E192 /* lib */,
+				62850CD818437ABF00A3D0BF /* business */,
+				62850CD41843794500A3D0BF /* model */,
+				62850CD31843793B00A3D0BF /* view */,
+				62580EB1183F872900361625 /* res */,
+				62580E8B183F81B500361625 /* SEAppDelegate.h */,
+				62580E8C183F81B500361625 /* SEAppDelegate.m */,
+				62580E94183F81B500361625 /* Images.xcassets */,
+				62580E83183F81B500361625 /* Supporting Files */,
+				62EB81A21843B8C50023E192 /* SEUtil.h */,
+				62EB81A31843B8C50023E192 /* SEUtil.m */,
+			);
+			path = semut;
+			sourceTree = "<group>";
+		};
+		62580E83183F81B500361625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62580E84183F81B500361625 /* semut-Info.plist */,
+				62580E85183F81B500361625 /* InfoPlist.strings */,
+				62580E88183F81B500361625 /* main.m */,
+				62580E8A183F81B500361625 /* semut-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62580EA1183F81B500361625 /* semutTests */ = {
+			isa = PBXGroup;
+			children = (
+				62580EA7183F81B500361625 /* semutTests.m */,
+				62580EA2183F81B500361625 /* Supporting Files */,
+			);
+			path = semutTests;
+			sourceTree = "<group>";
+		};
+		62580EA2183F81B500361625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62580EA3183F81B500361625 /* semutTests-Info.plist */,
+				62580EA4183F81B500361625 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62580EB1183F872900361625 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				62028E6518F6CA9A00726562 /* icone_check_enviado.png */,
+				62028E6618F6CA9A00726562 /* icone_enviando.png */,
+				62EB81D41843D0310023E192 /* ic_launcher */,
+				62EB81B01843C1E60023E192 /* composicao */,
+				624667991868989000583BBA /* bt_compartilhar_transalvador@2x.png */,
+				6246679A1868989000583BBA /* bt_excluir@2x.png */,
+				6246679B1868989000583BBA /* bt_excluir_sucom@2x.png */,
+				6246679C1868989000583BBA /* bt_salvar_transalvador@2x.png */,
+				6246679D1868989000583BBA /* bt_salvar_sucom@2x.png */,
+				6246679E1868989000583BBA /* bt_compartilhar_sucom@2x.png */,
+				6246679518685F0600583BBA /* bt_excluir_sucom.png */,
+				6246679618685F0600583BBA /* bt_excluir.png */,
+				623C8CAE186318BB008FD952 /* bt_compartilhar_transalvador.png */,
+				623C8CAF186318BB008FD952 /* bt_compartilhar_sucom.png */,
+				623C8CB0186318BB008FD952 /* bt_salvar_transalvador.png */,
+				623C8CB1186318BB008FD952 /* bt_salvar_sucom.png */,
+				625B0913184D02E20031A3C3 /* dotted.png */,
+				62F15B1C1850F9A100332CD0 /* iconeTU_ambulancia.png */,
+				62F15B1D1850F9A100332CD0 /* iconeTU_bombeiros.png */,
+				62F15B1E1850F9A100332CD0 /* iconeTU_defesa_civil.png */,
+				62F15B241850FA6200332CD0 /* icone_ligar.png */,
+				62F15B1F1850F9A100332CD0 /* iconeTU_policia_militar.png */,
+				625B0909184CE0880031A3C3 /* bt_alo_sucom.png */,
+				625B090A184CE0880031A3C3 /* bt_meus_registros_sucom.png */,
+				625B090B184CE0880031A3C3 /* bt_poluicao_sonora.png */,
+				625B090C184CE0880031A3C3 /* bt_quadro_avisos.png */,
+				625B090D184CE0880031A3C3 /* bt_registro_ocorrencia_sucom.png */,
+				6207E1CF184770F80093D0AA /* bt_cadastro_usuario.png */,
+				6207E1D0184770F80093D0AA /* bt_normas.png */,
+				6207E1CD184764790093D0AA /* placeholder.jpg */,
+				62EB81AE1843C0690023E192 /* ic_excluir@2x.png */,
+				62EB81AA1843BFFD0023E192 /* ic_excluir.png */,
+				624BAB85183FE10100F7381A /* bt_home_configuracoes.png */,
+				624BAB86183FE10100F7381A /* bt_home_sucom.png */,
+				624BAB87183FE10100F7381A /* bt_home_tel_uteis.png */,
+				624BAB88183FE10100F7381A /* bt_home_transalvador.png */,
+				62580EE2183FD88200361625 /* logo_semut.png */,
+				62580EC4183FBDC400361625 /* icon-btconfg_cadastro.png */,
+				62580EC5183FBDC400361625 /* icon-btconfg_normas_uso.png */,
+				62580EC6183FBDC400361625 /* icon-btsucom_polu_sonora.png */,
+				62580EC7183FBDC400361625 /* icon-btsucom_qua_aviso.png */,
+				62580EC8183FBDC400361625 /* icon-bttrans_alertas.png */,
+				62580EC9183FBDC400361625 /* icon-bttrans_edu_no_tran.png */,
+				62580ECA183FBDC400361625 /* icon-bttrans_fale_trans.png */,
+				62580ECB183FBDC400361625 /* icon-bttrans_meus_regis.png */,
+				62580ECC183FBDC400361625 /* icon-bttrans_noticias.png */,
+				62580ECD183FBDC400361625 /* icon-bttrans_Reg_de_ocor.png */,
+				62580EBE183FB80400361625 /* bt_fale_com_transalvador.png */,
+				62580EBF183FB80400361625 /* bt_meus_registros.png */,
+				62580EC0183FB80400361625 /* bt_noticias.png */,
+				62580EB2183F872900361625 /* bt_alerta.png */,
+				62580EB3183F872900361625 /* bt_educacao_transito.png */,
+				62580EB4183F872900361625 /* bt_registro_ocorrencia.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		627ABC42185F2912006147B6 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				627ABC43185F29AD006147B6 /* SETableViewCell.xib */,
+				627ABC47185F2ECF006147B6 /* SETableViewCell.h */,
+				627ABC48185F2ECF006147B6 /* SETableViewCell.m */,
+				627ABC45185F2E19006147B6 /* SETableViewImageCell.xib */,
+				627ABC4A185F2EDC006147B6 /* SETableViewImageCell.h */,
+				627ABC4B185F2EDC006147B6 /* SETableViewImageCell.m */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		62850CD31843793B00A3D0BF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				627ABC42185F2912006147B6 /* cell */,
+				62580E8E183F81B500361625 /* Main.storyboard */,
+				62580E91183F81B500361625 /* SEViewController.h */,
+				62580E92183F81B500361625 /* SEViewController.m */,
+				62850CD0184375B500A3D0BF /* SERegistroOcorrenciaController.h */,
+				62850CD1184375B500A3D0BF /* SERegistroOcorrenciaController.m */,
+				62850CDC18437BE100A3D0BF /* SECategoriasController.h */,
+				62850CDD18437BE100A3D0BF /* SECategoriasController.m */,
+				62EB81D11843C2BF0023E192 /* SEMenuController.h */,
+				62EB81D21843C2BF0023E192 /* SEMenuController.m */,
+				62F15B191850D87300332CD0 /* SEMenuSucomController.h */,
+				62F15B1A1850D87300332CD0 /* SEMenuSucomController.m */,
+				623F78FB1844F2C50095BB10 /* SEMarcacaoMapaController.h */,
+				623F78FC1844F2C50095BB10 /* SEMarcacaoMapaController.m */,
+				623F790018450DDC0095BB10 /* SEAnnotation.h */,
+				623F790118450DDC0095BB10 /* SEAnnotation.m */,
+				623F7906184512D40095BB10 /* SEConclusaoController.h */,
+				623F7907184512D40095BB10 /* SEConclusaoController.m */,
+				62A7DA6C1846293500C7E881 /* SENoticiaController.h */,
+				62A7DA6D1846293500C7E881 /* SENoticiaController.m */,
+				6207E1D3184773E00093D0AA /* SENormasController.h */,
+				6207E1D4184773E00093D0AA /* SENormasController.m */,
+				6207E1D618477CD40093D0AA /* SECadastroController.h */,
+				6207E1D718477CD40093D0AA /* SECadastroController.m */,
+				628A1A1C1848F52700C6EF95 /* SEDetalheNoticiaController.h */,
+				628A1A1D1848F52700C6EF95 /* SEDetalheNoticiaController.m */,
+				62F15B261850FD5700332CD0 /* SETelefonesUteisController.h */,
+				62F15B271850FD5700332CD0 /* SETelefonesUteisController.m */,
+				62801516185784450080665A /* SEAlertasController.h */,
+				62801517185784450080665A /* SEAlertasController.m */,
+				623550D51863626900156924 /* SEMeusRegistrosController.h */,
+				623550D61863626900156924 /* SEMeusRegistrosController.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		62850CD41843794500A3D0BF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				62850CD51843795700A3D0BF /* SECategoria.h */,
+				62850CD61843795700A3D0BF /* SECategoria.m */,
+				623F7903184512550095BB10 /* SEOcorrencia.h */,
+				623F7904184512550095BB10 /* SEOcorrencia.m */,
+				62A7DA631846172C00C7E881 /* SEUsuario.h */,
+				62A7DA641846172C00C7E881 /* SEUsuario.m */,
+				62A7DA691846219000C7E881 /* SENoticia.h */,
+				62A7DA6A1846219000C7E881 /* SENoticia.m */,
+				622EAC3B1864BE170065B6B3 /* SERegistro.h */,
+				622EAC3C1864BE170065B6B3 /* SERegistro.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		62850CD818437ABF00A3D0BF /* business */ = {
+			isa = PBXGroup;
+			children = (
+				62850CD918437AD200A3D0BF /* SECategoriaBS.h */,
+				62850CDA18437AD200A3D0BF /* SECategoriaBS.m */,
+				62A7DA661846213B00C7E881 /* SENoticiaBS.h */,
+				62A7DA671846213B00C7E881 /* SENoticiaBS.m */,
+				6280151018577C3F0080665A /* SEAlertaBS.h */,
+				6280151118577C3F0080665A /* SEAlertaBS.m */,
+				6263183B185A295B00BE8D8D /* SEUsuarioBS.h */,
+				6263183C185A295B00BE8D8D /* SEUsuarioBS.m */,
+				621145D418F5CB5F0080E518 /* SEOcorrenciaBS.h */,
+				621145D518F5CB5F0080E518 /* SEOcorrenciaBS.m */,
+			);
+			name = business;
+			sourceTree = "<group>";
+		};
+		62A7DA6F184673B900C7E881 /* asyncicondownload */ = {
+			isa = PBXGroup;
+			children = (
+				62A7DA70184673B900C7E881 /* IconDownloader.h */,
+				62A7DA71184673B900C7E881 /* IconDownloader.m */,
+			);
+			name = asyncicondownload;
+			path = lib/asyncicondownload;
+			sourceTree = "<group>";
+		};
+		62E20AB918F57C46008B90A8 /* reachability */ = {
+			isa = PBXGroup;
+			children = (
+				62E20ABA18F57C5E008B90A8 /* Reachability.h */,
+				62E20ABB18F57C5E008B90A8 /* Reachability.m */,
+			);
+			name = reachability;
+			sourceTree = "<group>";
+		};
+		62EB81A51843BD380023E192 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				62A7DA6F184673B900C7E881 /* asyncicondownload */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		62EB81B01843C1E60023E192 /* composicao */ = {
+			isa = PBXGroup;
+			children = (
+				62EB81B11843C1E60023E192 /* bar_tel_configuracoes_320x44.png */,
+				62EB81B21843C1E60023E192 /* bar_tel_configuracoes_320x44@2x.png */,
+				62EB81B31843C1E60023E192 /* bar_tel_configuracoes_320x64.png */,
+				62EB81B41843C1E60023E192 /* bar_tel_configuracoes_320x64@2x.png */,
+				62EB81B51843C1E60023E192 /* bar_tel_uteis_320x44.png */,
+				62EB81B61843C1E60023E192 /* bar_tel_uteis_320x44@2x.png */,
+				62EB81B71843C1E60023E192 /* bar_tel_uteis_320x64.png */,
+				62EB81B81843C1E60023E192 /* bar_tel_uteis_320x64@2x.png */,
+				62EB81B91843C1E60023E192 /* bar_topo_sucom_320x44.png */,
+				62EB81BA1843C1E60023E192 /* bar_topo_sucom_320x44@2x.png */,
+				62EB81BB1843C1E60023E192 /* bar_topo_sucom_320x64.png */,
+				62EB81BC1843C1E60023E192 /* bar_topo_sucom_320x64@2x.png */,
+				62EB81BD1843C1E60023E192 /* bar_transalvador_320x44.png */,
+				62EB81BE1843C1E60023E192 /* bar_transalvador_320x44@2x.png */,
+				62EB81BF1843C1E60023E192 /* bar_transalvador_320x64.png */,
+				62EB81C01843C1E60023E192 /* bar_transalvador_320x64@2x.png */,
+			);
+			path = composicao;
+			sourceTree = "<group>";
+		};
+		62EB81D41843D0310023E192 /* ic_launcher */ = {
+			isa = PBXGroup;
+			children = (
+				62EB81DF1843D0C50023E192 /* launcher_80.png */,
+				62EB81D51843D0410023E192 /* launcher_29.png */,
+				62EB81D61843D0410023E192 /* launcher_57.png */,
+				62EB81D71843D0410023E192 /* launcher_58.png */,
+				62EB81D81843D0410023E192 /* launcher_114.png */,
+				62EB81D91843D0410023E192 /* launcher_120.png */,
+			);
+			name = ic_launcher;
+			sourceTree = "<group>";
+		};
+		62EC083D184F8B76004C4A81 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				623A777F184F8CC300C09171 /* dao */,
+				62EC083E184F8B76004C4A81 /* semut.sqlite */,
+				623A7783184F8CF200C09171 /* SEDBUtil.h */,
+				623A7784184F8CF200C09171 /* SEDBUtil.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62580E78183F81B500361625 /* semut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62580EAB183F81B500361625 /* Build configuration list for PBXNativeTarget "semut" */;
+			buildPhases = (
+				1C98AC9ADAF44ACDB93B9101 /* Check Pods Manifest.lock */,
+				62580E75183F81B500361625 /* Sources */,
+				62580E76183F81B500361625 /* Frameworks */,
+				62580E77183F81B500361625 /* Resources */,
+				97AF4CAF42FB4DF29FA994FD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = semut;
+			productName = semut;
+			productReference = 62580E79183F81B500361625 /* semut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62580E99183F81B500361625 /* semutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62580EAE183F81B500361625 /* Build configuration list for PBXNativeTarget "semutTests" */;
+			buildPhases = (
+				62580E96183F81B500361625 /* Sources */,
+				62580E97183F81B500361625 /* Frameworks */,
+				62580E98183F81B500361625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62580EA0183F81B500361625 /* PBXTargetDependency */,
+			);
+			name = semutTests;
+			productName = semutTests;
+			productReference = 62580E9A183F81B500361625 /* semutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62580E71183F81B500361625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SE;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Login;
+				TargetAttributes = {
+					62580E99183F81B500361625 = {
+						TestTargetID = 62580E78183F81B500361625;
+					};
+				};
+			};
+			buildConfigurationList = 62580E74183F81B500361625 /* Build configuration list for PBXProject "semut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62580E70183F81B500361625;
+			productRefGroup = 62580E7A183F81B500361625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62580E78183F81B500361625 /* semut */,
+				62580E99183F81B500361625 /* semutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62580E77183F81B500361625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62EB81AC1843BFFD0023E192 /* ic_excluir.png in Resources */,
+				62EB81C21843C1E60023E192 /* bar_tel_configuracoes_320x44@2x.png in Resources */,
+				62EB81C61843C1E60023E192 /* bar_tel_uteis_320x44@2x.png in Resources */,
+				62580ED5183FBDC400361625 /* icon-bttrans_meus_regis.png in Resources */,
+				62580ECF183FBDC400361625 /* icon-btconfg_normas_uso.png in Resources */,
+				62580ED7183FBDC400361625 /* icon-bttrans_Reg_de_ocor.png in Resources */,
+				62580EC1183FB80400361625 /* bt_fale_com_transalvador.png in Resources */,
+				62580ED6183FBDC400361625 /* icon-bttrans_noticias.png in Resources */,
+				624667A01868989000583BBA /* bt_excluir@2x.png in Resources */,
+				62580EE3183FD88200361625 /* logo_semut.png in Resources */,
+				623C8CB4186318BB008FD952 /* bt_salvar_transalvador.png in Resources */,
+				6207E1CE184764790093D0AA /* placeholder.jpg in Resources */,
+				62580EC2183FB80400361625 /* bt_meus_registros.png in Resources */,
+				62EB81C11843C1E60023E192 /* bar_tel_configuracoes_320x44.png in Resources */,
+				62580ED2183FBDC400361625 /* icon-bttrans_alertas.png in Resources */,
+				62580E95183F81B500361625 /* Images.xcassets in Resources */,
+				62EB81CC1843C1E60023E192 /* bar_topo_sucom_320x64@2x.png in Resources */,
+				624BAB8B183FE10100F7381A /* bt_home_tel_uteis.png in Resources */,
+				62EB81CA1843C1E60023E192 /* bar_topo_sucom_320x44@2x.png in Resources */,
+				62EB81D01843C1E60023E192 /* bar_transalvador_320x64@2x.png in Resources */,
+				624667A11868989000583BBA /* bt_excluir_sucom@2x.png in Resources */,
+				62EB81E01843D0C50023E192 /* launcher_80.png in Resources */,
+				624667A21868989000583BBA /* bt_salvar_transalvador@2x.png in Resources */,
+				62F15B231850F9A100332CD0 /* iconeTU_policia_militar.png in Resources */,
+				62EC083F184F8B76004C4A81 /* semut.sqlite in Resources */,
+				623C8CB3186318BB008FD952 /* bt_compartilhar_sucom.png in Resources */,
+				62EB81AF1843C0690023E192 /* ic_excluir@2x.png in Resources */,
+				62580EB7183F872900361625 /* bt_registro_ocorrencia.png in Resources */,
+				627ABC46185F2E19006147B6 /* SETableViewImageCell.xib in Resources */,
+				62580E87183F81B500361625 /* InfoPlist.strings in Resources */,
+				62EB81DB1843D0410023E192 /* launcher_57.png in Resources */,
+				62580EC3183FB80400361625 /* bt_noticias.png in Resources */,
+				62580ED4183FBDC400361625 /* icon-bttrans_fale_trans.png in Resources */,
+				62F15B211850F9A100332CD0 /* iconeTU_bombeiros.png in Resources */,
+				62EB81C31843C1E60023E192 /* bar_tel_configuracoes_320x64.png in Resources */,
+				624BAB8A183FE10100F7381A /* bt_home_sucom.png in Resources */,
+				62EB81CB1843C1E60023E192 /* bar_topo_sucom_320x64.png in Resources */,
+				625B090F184CE0880031A3C3 /* bt_meus_registros_sucom.png in Resources */,
+				625B0914184D02E20031A3C3 /* dotted.png in Resources */,
+				62580ED1183FBDC400361625 /* icon-btsucom_qua_aviso.png in Resources */,
+				625B0911184CE0880031A3C3 /* bt_quadro_avisos.png in Resources */,
+				62EB81C51843C1E60023E192 /* bar_tel_uteis_320x44.png in Resources */,
+				62028E6818F6CA9A00726562 /* icone_enviando.png in Resources */,
+				625B090E184CE0880031A3C3 /* bt_alo_sucom.png in Resources */,
+				625B0910184CE0880031A3C3 /* bt_poluicao_sonora.png in Resources */,
+				62EB81DD1843D0410023E192 /* launcher_114.png in Resources */,
+				62580EBD183F8CF400361625 /* Default@2x.png in Resources */,
+				62F15B251850FA6200332CD0 /* icone_ligar.png in Resources */,
+				6246679818685F0600583BBA /* bt_excluir.png in Resources */,
+				62580ED3183FBDC400361625 /* icon-bttrans_edu_no_tran.png in Resources */,
+				62580ECE183FBDC400361625 /* icon-btconfg_cadastro.png in Resources */,
+				62F15B201850F9A100332CD0 /* iconeTU_ambulancia.png in Resources */,
+				62EB81CF1843C1E60023E192 /* bar_transalvador_320x64.png in Resources */,
+				6246679718685F0600583BBA /* bt_excluir_sucom.png in Resources */,
+				6207E1D1184770F80093D0AA /* bt_cadastro_usuario.png in Resources */,
+				62EB81DC1843D0410023E192 /* launcher_58.png in Resources */,
+				624BAB89183FE10100F7381A /* bt_home_configuracoes.png in Resources */,
+				624BAB8C183FE10100F7381A /* bt_home_transalvador.png in Resources */,
+				627ABC44185F29AD006147B6 /* SETableViewCell.xib in Resources */,
+				6246679F1868989000583BBA /* bt_compartilhar_transalvador@2x.png in Resources */,
+				62580EBC183F8CF400361625 /* Default.png in Resources */,
+				62580ED0183FBDC400361625 /* icon-btsucom_polu_sonora.png in Resources */,
+				62EB81C41843C1E60023E192 /* bar_tel_configuracoes_320x64@2x.png in Resources */,
+				62EB81DA1843D0410023E192 /* launcher_29.png in Resources */,
+				62028E6718F6CA9A00726562 /* icone_check_enviado.png in Resources */,
+				623C8CB2186318BB008FD952 /* bt_compartilhar_transalvador.png in Resources */,
+				62580EB6183F872900361625 /* bt_educacao_transito.png in Resources */,
+				62EB81C91843C1E60023E192 /* bar_topo_sucom_320x44.png in Resources */,
+				62580EB5183F872900361625 /* bt_alerta.png in Resources */,
+				62EB81DE1843D0410023E192 /* launcher_120.png in Resources */,
+				625B0912184CE0880031A3C3 /* bt_registro_ocorrencia_sucom.png in Resources */,
+				62580EBB183F8CF400361625 /* Default-568h@2x.png in Resources */,
+				62580E90183F81B500361625 /* Main.storyboard in Resources */,
+				62EB81CE1843C1E60023E192 /* bar_transalvador_320x44@2x.png in Resources */,
+				623C8CB5186318BB008FD952 /* bt_salvar_sucom.png in Resources */,
+				62EB81C71843C1E60023E192 /* bar_tel_uteis_320x64.png in Resources */,
+				62EB81C81843C1E60023E192 /* bar_tel_uteis_320x64@2x.png in Resources */,
+				624667A41868989000583BBA /* bt_compartilhar_sucom@2x.png in Resources */,
+				62EB81CD1843C1E60023E192 /* bar_transalvador_320x44.png in Resources */,
+				6207E1D2184770F80093D0AA /* bt_normas.png in Resources */,
+				624667A31868989000583BBA /* bt_salvar_sucom@2x.png in Resources */,
+				62F15B221850F9A100332CD0 /* iconeTU_defesa_civil.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62580E98183F81B500361625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62580EA6183F81B500361625 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C98AC9ADAF44ACDB93B9101 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97AF4CAF42FB4DF29FA994FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62580E75183F81B500361625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62850CDE18437BE100A3D0BF /* SECategoriasController.m in Sources */,
+				62EB81A41843B8C50023E192 /* SEUtil.m in Sources */,
+				623550D4186343CB00156924 /* SENoticiaDAO.m in Sources */,
+				624A1FAD1852389E00CE09F8 /* SEOcorrenciaDAO.m in Sources */,
+				623F78FD1844F2C50095BB10 /* SEMarcacaoMapaController.m in Sources */,
+				623F7908184512D40095BB10 /* SEConclusaoController.m in Sources */,
+				623F7905184512550095BB10 /* SEOcorrencia.m in Sources */,
+				62A7DA6E1846293500C7E881 /* SENoticiaController.m in Sources */,
+				62A7DA6B1846219000C7E881 /* SENoticia.m in Sources */,
+				62580E8D183F81B500361625 /* SEAppDelegate.m in Sources */,
+				62A7DA72184673B900C7E881 /* IconDownloader.m in Sources */,
+				623F790218450DDC0095BB10 /* SEAnnotation.m in Sources */,
+				62F15B281850FD5700332CD0 /* SETelefonesUteisController.m in Sources */,
+				62801518185784450080665A /* SEAlertasController.m in Sources */,
+				6263183D185A295B00BE8D8D /* SEUsuarioBS.m in Sources */,
+				62580E93183F81B500361625 /* SEViewController.m in Sources */,
+				622EAC3D1864BE170065B6B3 /* SERegistro.m in Sources */,
+				627ABC4C185F2EDC006147B6 /* SETableViewImageCell.m in Sources */,
+				62A7DA651846172C00C7E881 /* SEUsuario.m in Sources */,
+				62850CD2184375B500A3D0BF /* SERegistroOcorrenciaController.m in Sources */,
+				623550D71863626900156924 /* SEMeusRegistrosController.m in Sources */,
+				6207E1D818477CD40093D0AA /* SECadastroController.m in Sources */,
+				627ABC49185F2ECF006147B6 /* SETableViewCell.m in Sources */,
+				62EB81D31843C2BF0023E192 /* SEMenuController.m in Sources */,
+				6207E1D5184773E00093D0AA /* SENormasController.m in Sources */,
+				621145D618F5CB5F0080E518 /* SEOcorrenciaBS.m in Sources */,
+				623A7785184F8CF200C09171 /* SEDBUtil.m in Sources */,
+				62A7DA681846213B00C7E881 /* SENoticiaBS.m in Sources */,
+				623A7782184F8CDC00C09171 /* SECategoriaDAO.m in Sources */,
+				62F15B1B1850D87300332CD0 /* SEMenuSucomController.m in Sources */,
+				62850CD71843795700A3D0BF /* SECategoria.m in Sources */,
+				62850CDB18437AD200A3D0BF /* SECategoriaBS.m in Sources */,
+				6280151218577C3F0080665A /* SEAlertaBS.m in Sources */,
+				62580E89183F81B500361625 /* main.m in Sources */,
+				62E20ABC18F57C5E008B90A8 /* Reachability.m in Sources */,
+				628A1A1E1848F52700C6EF95 /* SEDetalheNoticiaController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62580E96183F81B500361625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62580EA8183F81B500361625 /* semutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62580EA0183F81B500361625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62580E78183F81B500361625 /* semut */;
+			targetProxy = 62580E9F183F81B500361625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62580E85183F81B500361625 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62580E86183F81B500361625 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		62580E8E183F81B500361625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62580E8F183F81B500361625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62580EA4183F81B500361625 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62580EA5183F81B500361625 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62580EA9183F81B500361625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		62580EAA183F81B500361625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62580EAC183F81B500361625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D40E1DFD8A884F33B3F42EFB /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Julio Rocha (894HS84BKK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Julio Rocha (894HS84BKK)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "semut/semut-Prefix.pch";
+				INFOPLIST_FILE = "semut/semut-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		62580EAD183F81B500361625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D40E1DFD8A884F33B3F42EFB /* Pods.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Login Informática Comércio e Representação Ltda. (ZVUZ3MVQ8J)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "semut/semut-Prefix.pch";
+				INFOPLIST_FILE = "semut/semut-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		62580EAF183F81B500361625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/semut.app/semut";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "semut/semut-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "semutTests/semutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		62580EB0183F81B500361625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/semut.app/semut";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "semut/semut-Prefix.pch";
+				INFOPLIST_FILE = "semutTests/semutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62580E74183F81B500361625 /* Build configuration list for PBXProject "semut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62580EA9183F81B500361625 /* Debug */,
+				62580EAA183F81B500361625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62580EAB183F81B500361625 /* Build configuration list for PBXNativeTarget "semut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62580EAC183F81B500361625 /* Debug */,
+				62580EAD183F81B500361625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62580EAE183F81B500361625 /* Build configuration list for PBXNativeTarget "semutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62580EAF183F81B500361625 /* Debug */,
+				62580EB0183F81B500361625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62580E71183F81B500361625 /* Project object */;
+}

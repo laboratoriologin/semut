@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:variablePadding="true" android:drawable="@drawable/load_a" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_b" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_c" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_d" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_e" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_f" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_g" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_f" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_e" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_d" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_c" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load_b" android:duration="100" />
+    
+</animation-list>

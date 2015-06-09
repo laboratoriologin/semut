@@ -1,0 +1,204 @@
+﻿	
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="Expires" content="0" />
+
+<title>Gráficos - Dashboard Prefeitura</title>
+
+<link rel="shortcut icon" href="imagens/favicon.ico" />
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<link href="css/estilo_grafico.css" rel="stylesheet" type="text/css" />
+<link href="css/estilo_alerta.css" rel="stylesheet" type="text/css" />
+<link href="css/datatable.css" rel="stylesheet" type="text/css" />
+<link href="js/jquery/css/ui-lightness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+<link href="js/pnotify/jquery.pnotify.default.css" rel="stylesheet" type="text/css" />
+<link href="js/pnotify/jquery.pnotify.default.icons.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="js/jquery/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery.ui.datepicker-pt-BR.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery.datatable.js" type="text/javascript"></script>
+<script src="js/jquery/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/pnotify/jquery.pnotify.min.js" type="text/javascript"></script>
+<!-- Javascript responsavel por carregar os graficos dessa pagina e tambem executar novas consultas -->
+<script src="js/graficos.js"></script>
+<style>
+	.groupImage{}
+	.boxTransalvador{}
+	.boxSucom{}
+</style>
+</head>
+
+<body>
+	<div id="geral">
+		<!--Topo Início-->
+		<div id="barraTopo1">Dashboard Prefeitura</div>
+		<div id="barraTopo2">
+			<div id="localData">Salvador, 13 de janeiro de 2014. 13h13</div>
+			<div id="usuario">Usuário: Fulano de Tal</div>
+			<div class="periodo" id="periodo">
+				De: <input type="text" maxlength="10" id="data_inicial" style="width: 25%;" onchange="atualizarGraficos();" /> a: <input type="text" maxlength="10" id="data_final" onchange="atualizarGraficos();" style="width: 25%;" />
+			</div>
+			<div id="atualizarTela">
+				<div id="reload"  class="bg_botaoBarraTopoAtualizar"><a href="#" title=""><img style="border:none;" src="imagens/icone_botaoAtualizar.png" width="30" height="30" /></a></div>
+			</div>
+			 <div id="admOcorrencias">
+	          <div class="bg_botaoBarraTopo"><a onclick="fullWindow('../pages/dashboard.xhtml','ocorrencia',1);" href="#" title=""><img style="border:none;" src="imagens/icone_adm_ocorrencias.png" width="21" height="21"/>Administrar Ocorrências</a>
+	          </div>
+	          </div>
+			<div class="sair" id="sair">Sair</div>
+		</div>
+		<!--Topo Fim-->
+		<!--Conteúdo Início-->
+		<div id="abas">
+			<div class="graficoSelec" id="opcao1">Gráficos</div>
+			<a id="btnMapa"><div class="mapaNSelec" id="opcao2"></div></a>
+		</div>
+		<!--Abas numeradas das "páginas" dos gráficos-->
+		<div id="abasGraficos">
+			<div id="abasNumeradas">
+				<ul>
+					<li><a href="#" id="aba1" class="abaSelecionada" onclick="showAba1();">1</a></li>
+					<li><a href="#" id="aba2" onclick="showAba2();">2</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Primeira Aba -->
+
+		<div id="secaoGraficos" class="secaoGraficos">
+
+			<!-- 
+			<div class="caixaGraficos" id="graficoOcorrenciaSucom">
+				<div class="tituloGraficos" id="TituloGraficoOcorSucom">
+					<div class="textoTMapa">Ocorrências SUCOM 
+					<select class="boxSucom" id="categoria_sucom" onchange="loadOcorrenciaSucomGraph();"><option value="">Todas as ocorrências</option></select>
+					</div>
+					
+				</div>
+				<div id="chart_sucom" style="width: 530px; height: 500px;"></div>
+			</div>
+			 -->
+
+			<div class="caixaGraficos" style="height: 650px;" id="graficoOcorrenciaTransalvador">
+				<div class="tituloGraficos" id="TituloGraficoOcoTransalvador">
+					<div class="textoTMapa">Ocorrências
+					<select class="boxTransalvador" id="categoria_transalvador" onchange="loadOcorrenciaTransalvadorGraph();">
+						<option value="">Todas as ocorrências</option>
+					</select>
+					</div>
+				</div>
+				<div id="chart_transalvador" style="width: 500px; height: 650px;"></div>
+			</div>
+
+			<div class="caixaGraficos" style="height: 650px;" id="graficoOcorrenciaBairro">
+				<div class="tituloGraficos" id="TituloGraficoOcoBairro">
+					<div class="textoTMapa">Ocorrências por Área</div>					
+				</div>
+				<div id="chart_area" style="width: 500px; height: 650px;"></div>
+			</div>
+
+			<!-- 
+			<div class="caixaGraficos" id="graficoTodasOcorrencias">
+				<div class="tituloGraficos" id="TituloGraficoOcoTransalvador">
+					<div class="textoTMapa">Todas as Ocorrências</div>
+				</div>
+				<div id="chart_geral" style="width: 530px; height: 500px;"></div>
+			</div>
+			-->
+
+		</div>
+
+		<!-- Fim Primeira Aba -->
+
+		<!-- Segunda Aba -->
+
+		<div id="secaoGraficos2" class="secaoGraficos">
+			<div class="caixaGraficos" style="height: 650px;" id="graficoOcorrenciaOcorTempo">
+				<div class="tituloGraficos" id="TituloGraficoOcorTempo">
+					<div class="textoTMapa">
+						Ocorrências Por tempo <select id="periodo_tempo" onchange="loadTempoGraph();">
+							<option value="dia">Diário</option>
+							<option value="semana">Semanal</option>
+							<option value="mes">Mensal</option>
+						</select>
+						<!--  
+						<select id="grupo_tempo" onchange="reloadComboOcorrencia(this.value,'combo_tipo_tempo');  loadTempoGraph();">
+							<option value="1">Transalvador</option>
+							<option value="2">Sucom</option>
+						</select>
+ -->
+						<select class="boxTransalvador" id="combo_tipo_tempo" onchange="loadTempoGraph()">
+							<option value="">Todas as ocorrências</option>
+						</select>
+					</div>
+					
+				</div>
+				<div id="chart_tempo" style="width: 500px; height: 650px; float: left;"></div>
+			</div>
+
+			<div class="caixaGraficos" style="height: 650px;" id="graficoOcorTempoResolucao">
+				<div class="tituloGraficos" id="TituloGraficoOcorTempoResolucao">
+					<div class="textoTMapa">
+						Ocorrências por Tempo de Resolução 
+						<!-- 
+						<select id="grupo_tempo_resolucao" onchange="reloadComboOcorrencia(this.value,'combo_tipo_tempo_resolucao'); loadTempoResolucaoGraph();">
+							<option value="1">Transalvador</option>
+							<option value="2">Sucom</option>
+						</select>
+						 -->
+						<select class="boxTransalvador" id="combo_tipo_tempo_resolucao" onchange="loadTempoResolucaoGraph();">
+							<option value="">Todas as ocorrências</option>
+						</select>
+						
+					</div>
+				</div>
+
+				<div id="chart_tempo_resolucao" style="width: 500px; height: 650px; float: left;"></div>
+
+			</div>
+
+		</div>
+
+		<div id="secaoInfor">
+			<div id="botaoOcorrenciasPendentes">
+				<a id="dialogOpener" title="Ocorrências Pendentes"><img src="imagens/icone_botaoAmpliarOcorPendentes.png" width="25" height="494" alt="Detalhes Ocorrências Pendentes - Clique para ampliar" /></a>
+			</div>
+			<div id="tempoRealOcorrenciasPendentes">
+				<div class="numeroOcorrenciasGraf" id="numeroOcorrenciasPendentesGraf">...</div>
+				<div class="legendaOcorrenciasGraf" id="legendaOcorrenciasPendentesGraf">Ocorrência(s) Pendentes(s)</div>
+			</div>
+			<!-- 
+			<div id="sucomOcorenciasResolvidas">
+				<div class="legendaOcorrenciasGraf" id="legendaOcorrenciasResSucomGraf">SUCOM Ocorrências Resolvidas Hoje</div>
+				<div class="numeroOcorrenciasGraf" id="numeroOcorrenciasResSucomGraf">...</div>
+			</div>
+			 -->
+			<div id="transalvadorOcorenciasResolvidas">
+				<div class="legendaOcorrenciasGraf" id="legendaOcorrenciasResTransalGraf">Ocorrências Resolvidas Hoje</div>
+				<div class="numeroOcorrenciasGraf" id="numeroOcorrenciasResTransalGraf">...</div>
+			</div>
+		</div>
+
+		<!-- Lightbox ocorrencias -->
+
+		<div id="dialog" title="Ocorrências pendentes">
+			<div id="datatable" style="padding: 10px; background: #fff;"></div>
+		</div>
+		
+		<div id="dialogImagem" title="Imagem"></div>
+		
+		<!--Conteúdo Fim-->
+		<!--Rodapé Início-->
+		<div id="rodape">
+			<span> Dashboard Prefeitura de Salvador | Login 2013 </span>
+		</div>
+		<!--Rodapé Fim-->
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+
+    <color name="actionbar_title_color">#FFFFFF</color>
+    <color name="actionbar_separator">#FFFFFF</color>
+    <color name="actionbar_title">#FFFFFF</color>
+    <color name="actionbar_background_start">#3B5998</color>
+    <color name="actionbar_background_end">#3B5998</color>
+    <color name="actionbar_background_item_pressed_start">#1E90FF</color>
+    <color name="actionbar_background_item_pressed_end">#1E90FF</color>
+    <color name="splash_background">#3B5998</color>
+    <color name="manchete_background">#AA000000</color>
+
+    
+    <color name="semut">#33548b</color>
+    <color name="transalvador">#d13900</color>
+    <color name="sucom">#999d13</color>
+    <color name="configuracoes">#6c77b9</color>
+    <color name="telefones_uteis">#15a4af</color>
+    
+    <color name="transalvador_highlighted">#d16e49</color>
+    <color name="sucom_highlighted">#b4b742</color>
+    <color name="configuracoes_highlighted">#8492e2</color>
+    <color name="telefones_uteis_highlighted">#73b7bc</color>
+
+    <color name="branco">#FFFFFF</color>
+    <color name="preto">#000000</color>
+    
+    <color name="corlinha">#d8d8d8</color>
+    <color name="cinza_fonte">#535456</color>
+    
+    <color name="cinza_fonte_fraco">#999b9d</color>
+    
+    
+
+</resources>

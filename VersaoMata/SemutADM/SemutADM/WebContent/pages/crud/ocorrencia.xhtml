@@ -1,0 +1,204 @@
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${ocorrenciaFaces}" />
+	<ui:param name="mbeanModel" value="${ocorrenciaFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${ocorrenciaFaces.crudPesquisaModel}" />
+	<ui:param name="avoidUpdate" value="true" />
+
+	<ui:define name="cadastro">
+
+		<h:inputHidden value="#{mbeanModel.latitude}" id="latitude" />
+		<h:inputHidden value="#{mbeanModel.longitude}" id="longitude" />
+
+		<h:panelGrid width="60%" columns="2" columnClasses="coluna50, coluna50_4">
+			<p:outputLabel for="itNome" value="Descrição:" />
+			<p:outputLabel for="status" />
+
+
+			<p:inputTextarea id="itNome" cols="50" rows="10" maxlength="500" value="#{mbeanModel.descricao}" style="width: 95%" required="true" requiredMessage="Descrição: Obrigatório" />
+			<p:outputLabel for="status" />
+
+
+			<p:outputLabel for="categoriaocorrencia" value="Categoria de Ocorrência:" />
+			<p:outputLabel for="status" value="Alerta?" />
+			
+			<p:selectOneMenu id="categoriaocorrencia" value="${mbeanModel.categoriaOcorrencia.id}" style="width:100%" required="true" requiredMessage="Categoria de ocorrência: Obrigatório">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.categoriasOcorrencias}" />
+			</p:selectOneMenu>
+
+
+		<p:selectBooleanCheckbox id="status" value="#{mbeanModel.status}" immediate="true" >
+		<p:ajax event="change" process="@this" global="true"
+				update="outputBtn" />
+		</p:selectBooleanCheckbox>
+		
+		<p:outputLabel for="situacao" value="Situação:" />
+		<p:outputLabel for="status" />
+		
+		<p:selectOneMenu id="situacao" value="${mbeanModel.tipoSituacao.id}" style="width:100%" required="true" requiredMessage="Situação: Obrigatório">
+				<f:selectItem  itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.tiposSituacao}" />
+			</p:selectOneMenu>
+		
+		
+		</h:panelGrid>
+
+		<br />
+		<br />
+
+
+
+		<p:tabView cache="false" activeIndex="0" id="tvEspec" style="width: 600;height: 400;">
+
+			<p:tab title="Marque local">
+				<div id="map" style="width: 100%; height: 400px"></div>
+			</p:tab>
+
+			<p:tab title="Imagem">
+				<ui:include src="tabMidia.xhtml"></ui:include>
+			</p:tab>
+		</p:tabView>
+	</ui:define>
+	<ui:define name="actionsBtsRight" >
+		<p:outputPanel id="outputBtn">
+		<p:commandButton id="btnEnviarPush" value="Enviar mensagens" icon="ui-icon-mail-closed" action="#{mbean.enviarPush}" style="height:28px; width: 165px;margin-left: 2px;" rendered="#{mbeanModel.status}" />
+		</p:outputPanel>
+	</ui:define>
+
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="100%" columns="5" columnClasses="coluna10, coluna30, coluna30, coluna30, coluna50_4">
+			<p:outputLabel for="idPesquisa" value="Id:" />
+			<p:outputLabel for="itNomePesquisa" value="Descrição:" />
+			<p:outputLabel for="categoriaocorrenciaPesquisa" value="Categoria de Ocorrência:" />
+			<p:outputLabel for="situacaoPesquisa" value="Situação:" />
+			<p:outputLabel for="statusPesquisa" value="Alerta?" />
+			
+			<p:inputText id="idPesquisa" maxlength="50" value="#{mbeanPesquisaModel.id}" style="width: 80%" />
+			<p:inputText id="itNomePesquisa" maxlength="50" value="#{mbeanPesquisaModel.descricao}" style="width: 95%" />
+			
+			<p:selectOneMenu id="categoriaocorrenciaPesquisa" value="${mbeanPesquisaModel.categoriaOcorrencia.id}" style="width:95%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.categoriasOcorrencias}" />
+			</p:selectOneMenu>
+			
+			<p:selectOneMenu id="situacaoPesquisa" value="${mbeanPesquisaModel.tipoSituacao.id}" style="width:85%">
+				<f:selectItem  itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.tiposSituacao}" />
+			</p:selectOneMenu>
+			
+			<p:selectBooleanCheckbox id="statusPesquisa" value="#{mbeanPesquisaModel.status}" />
+		
+
+		</h:panelGrid>
+		<script type="text/javascript">
+			var currentMarker = null;
+			var map = null;
+
+			function startMap(lat, lng, zoom, marker) {
+
+				var mapOptions = {
+					zoom : zoom,
+					center : new google.maps.LatLng(lat, lng),
+					mapTypeId : google.maps.MapTypeId.ROADMAP
+				};
+				map = new google.maps.Map(document.getElementById('map'),
+						mapOptions);
+
+				google.maps.event.addListener(map, 'click', function(e) {
+					placeMarker(e.latLng, map);
+				});
+
+				if (marker) {
+					placeMarker(mapOptions.center, map);
+				}
+			}
+
+			function placeMarker(position, map) {
+				if (currentMarker == null) {
+					currentMarker = new google.maps.Marker({
+						position : position,
+						map : map
+					});
+				} else {
+					currentMarker.setPosition(position);
+				}
+				document.getElementById('tabview:latitude').value = position
+						.lat();
+				document.getElementById('tabview:longitude').value = position
+						.lng();
+				map.panTo(position);
+			}
+
+			function onPositionUpdate(position) {
+
+				var lat = position.coords.latitude;
+				var lng = position.coords.longitude;
+
+				startMap(lat, lng, 9, false);
+			}
+
+			$(document)
+					.ready(
+							function() {
+
+								var latAux = document
+										.getElementById('tabview:latitude').value;
+								var lngAux = document
+										.getElementById('tabview:longitude').value;
+
+								if (latAux == "") {
+									if (navigator.geolocation) {
+										navigator.geolocation
+												.getCurrentPosition(onPositionUpdate);
+									} else {
+										alert("Problemas de geoposicionamento do navegador.");
+									}
+								} else {
+									startMap(latAux, lngAux, 16, true);
+								}
+
+							});
+		</script>
+
+
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+	
+	<p:column headerText="Id" style="width: 10%">
+			<div align="center">
+				<h:outputText value="#{linha.id}" />
+			</div>
+		</p:column>
+
+		<p:column  style="width: 30%"  headerText="Categoria de Ocorrência">
+			<div align="center">
+				<h:outputText value="#{linha.categoriaOcorrencia.nomeCompleto}" />
+			</div>
+		</p:column>
+		
+		<p:column headerText="Descrição" style="width: 25%">
+			<div align="center">
+				<h:outputText value="#{linha.descricao}" />
+			</div>
+		</p:column>
+		
+		<p:column headerText="Situação" style="width: 25%">
+			<div align="center">
+				<h:outputText value="#{linha.tipoSituacao.descricao}" />
+			</div>
+		</p:column>
+		
+		<p:column headerText="Data">
+			<div align="center">
+				<h:outputText value="#{linha.data}">
+					<f:convertDateTime pattern="dd/MM/yyyy" locale="pt_BR"/>
+				</h:outputText>
+			</div>
+		</p:column>
+
+	</ui:define>
+
+
+</ui:composition>

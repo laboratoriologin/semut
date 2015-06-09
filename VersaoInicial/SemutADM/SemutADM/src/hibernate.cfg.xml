@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="current_session_context_class">thread</property>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="hibernate.connection.datasource">java:/comp/env/jdbc/bdSEMUTSSA</property>
+		<property name="hibernate.query.substitutions">true 1, false 0</property>
+
+		<property name="hibernate.show_sql">false</property>
+
+		<mapping class="com.login.semut.model.Menu" />
+
+		<mapping class="com.login.semut.model.Usuario" />
+		<mapping class="com.login.semut.model.Permissao" />
+		<mapping class="com.login.semut.model.Grupo" />
+		<mapping class="com.login.semut.model.GrupoOcorrencia" />
+		<mapping class="com.login.semut.model.Ocorrencia" />
+		<mapping class="com.login.semut.model.CategoriaOcorrencia" />
+		<mapping class="com.login.semut.model.UsuarioAPP" />
+		<mapping class="com.login.semut.model.Noticia" />
+		<mapping class="com.login.semut.model.TipoNoticia" />
+		<mapping class="com.login.semut.model.TipoSituacao" />
+		<mapping class="com.login.semut.model.Regiao" />
+		<mapping class="com.login.semut.model.RegiaoCoordenada" />
+
+	</session-factory>
+
+</hibernate-configuration>
+	
+	

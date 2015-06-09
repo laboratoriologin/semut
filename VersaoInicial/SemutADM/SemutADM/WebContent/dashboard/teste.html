@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<style>
+	.ui-dialog-titlebar-close {
+	  visibility: hidden;
+	}
+	
+	.dialogGrafico {
+	}
+	
+</style>
+
+<!-- Javascript responsavel por carregar os graficos dessa pagina e tambem executar novas consultas -->
+<script src="js/graficos.js"></script>
+
+</head>
+<body>
+
+	<input type="text" id="data_inicial"/>
+	<input type="text" id="data_final"/>
+
+	<div style="float: left; width:50%;">
+		<div id="chart_geral" style="width: 500px; height: 500px; float: left;"></div>
+		<input type="button" onclick="loadOcorrenciaGraph()" value="xxx1" />
+		<div class="dialogGrafico" id="dialogOcorrenciaGeral"></div>
+	</div>
+	<div style="float: left;  width:50%;">
+		<div id="chart_sucom" style="width: 500px; height: 500px; float: left;"></div>
+		<input type="button" onclick="loadOcorrenciaSucomGraph()" value="xxx2" />
+		<div class="dialogGrafico" id="dialogOcorrenciaSucom"></div>
+	</div>
+	
+	<br/>
+	
+	<div style="float: left;  width:50%;">
+		<div id="chart_transalvador" style="width: 500px; height: 500px; float: left;"></div>
+		<input type="button" onclick="loadOcorrenciaTransalvadorGraph()" value="xxx3" />
+		<div class="dialogGrafico" id="dialogOcorrenciaTransalvador"></div>
+	</div>
+	<br/>
+	<div  style="width:100%;">
+		<div id="chart_area" style="width: 90%; height: 700px;"></div>
+		<input type="button" onclick="loadAreaGraph()" value="xxx4" />
+		<div class="dialogGrafico" id="dialogArea"></div>
+	</div>
+	<br/>
+	<div style="float: left;  width:50%;">
+		<div id="chart_line" style="width: 500px; height: 500px; float: left;"></div>
+		<input type="button" onclick="loadLineGraph()" value="xxx4" />
+		<select id="periodo_line">
+		 <option label="dia" value="dia">Diário</option>
+		 <option label="semana" value="semana">Semanal</option>
+		 <option label="mes" value="mes">Mensal</option>
+		</select>
+		<select id="grupo_line">
+		 <option label="1" value="1">Transalvador</option>
+		 <option label="2" value="2">Sucom</option>
+		</select>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+
+body {
+	background-image: url(../imagens/bg4.png);
+	background-repeat: repeat;
+}
+
+#geral {
+	width: 100%;
+	height: 626px;
+	z-index: 8;
+	text-align: center;
+	min-width: 1024px;
+}
+
+
+/*
+------------------------------------
+-------------Conteúdo Início--------
+------------------------------------
+*/
+
+
+/*-------------Visualização Ocorrências-------------*/
+
+.bg_botaovisuOcorrenciasPendentes a {
+	background:url(../imagens/bg_botaoOPendentes_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+	display:block;
+	width: 100%;
+	height: 60px;
+	left:0;
+	top:0;
+	color: #FFF;
+	line-height: 45px;
+	text-indent: 40px;
+	line-height: 60px;
+}
+
+
+.bg_botaovisuOcorrenciasPendentes a:active {
+	background:url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 60px;
+	left:0;
+	top:0;
+	color: #FFF;
+	line-height: 45px;
+	text-indent: 40px;
+	line-height: 60px;
+}
+
+.bg_botaovisuOcorrenciasPendentes a:hover {
+	background:url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 60px;
+	left:0;
+	top:0;
+	color: #FFF;
+	line-height: 45px;
+	text-indent: 40px;
+	line-height: 60px;
+}
+
+
+.bg_botaovisuOcorrenciasAceitas a {
+	background:url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+
+.bg_botaovisuOcorrenciasAceitas a:active {
+	background:url(../imagens/bg_botaoOAceitas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasAceitas a:hover {
+	background:url(../imagens/bg_botaoOAceitas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasResolvidas a {
+	background:url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasResolvidas a:active {
+	background:url(../imagens/bg_botaoOResolvidas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasResolvidas a:hover {
+	background:url(../imagens/bg_botaoOResolvidas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasRecusadas a {
+	background:url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasRecusadas a:active {
+	background:url(../imagens/bg_botaoORecusadas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrenciasRecusadas a:hover {
+	background:url(../imagens/bg_botaoORecusadas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #FFFFFF;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrencia_nSelec a {
+	background:url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration:none;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+
+.bg_botaovisuOcorrencia_selec a:active {
+	background:url(../imagens/bg_botaovisuOcorrencia_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+.bg_botaovisuOcorrencia_selec a:hover {
+	background:url(../imagens/bg_botaovisuOcorrencia_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display:block;
+	width: 100%;
+	height: 45px;
+	left:0;
+	top:0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+
+
+#visualizacaoOcorrencias #visualizacaoOTexto {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #33558C;
+	font-size: 11px;
+	line-height: normal;
+	background-color: #a0a4c3;
+	text-align: center;
+	text-indent: 3px;
+}
+
+#visualizacaoOcorrencias #botaoOPendentes {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+	
+
+.botaovisuOcorrencia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: left;
+	color: #FFF;
+	list-style-type:none;
+	list-style-position: outside;
+	text-indent: 40px;
+	line-height: 26px;
+}
+
+.botaoOPendentes {
+	background-image: url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+}
+
+#visualizacaoOcorrencias {
+	position: relative;
+	left: 44%;
+	top: 119px;
+	width: 131px;
+	height: 400px;
+	z-index: 6;
+	display:inline-block;
+}
+
+#visualizacaoOTexto {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	height: 50px;
+	z-index: 6;
+}
+
+#botaoOPendentes {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	width: 100%;
+	height: 60px;
+	z-index: 6;
+}
+
+#descricaoPendentes {
+	position: absolute;
+	left: 40px;
+	top: 37px;
+	width: 67px;
+	height: 19px;
+	z-index: 8;
+}
+
+#botaoOAceitas {
+	position: absolute;
+	left: 0px;
+	top: 110px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOResolvidas {
+	position: absolute;
+	left: 0px;
+	top: 155px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoORecusadas {
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOTodasCadUsuarios  {
+	position: absolute;
+	left: 0px;
+	top: 245px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOTodas {
+	position: absolute;
+	left: 0px;
+	top: 290px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoStatusBairro {
+	position: absolute;
+	left: 0px;
+	top: 335px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}

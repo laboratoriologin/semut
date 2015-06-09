@@ -1,0 +1,12 @@
+<ui:component xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<p:commandButton id="btnInserir" value="Cadastrar" icon="salvar" action="#{mbean.insertEvent}" update="@form" style="height:28px; width: 110px;margin-left: 2px;" rendered="#{!mbean.flagAlterar and autenticacaoFaces.permissaoSelecionada.flagInserir and !avoidUpdate}" />
+	<p:commandButton id="btnInserir2" value="Cadastrar" icon="salvar" action="#{mbean.insertEvent}" style="height:28px; width: 110px;margin-left: 2px;" rendered="#{!mbean.flagAlterar and autenticacaoFaces.permissaoSelecionada.flagInserir and avoidUpdate}" />
+
+	<p:commandButton id="btnAlterar" value="Alterar" icon="salvar" action="#{mbean.updateEvent}"  update="@form" style="height:28px; width: 110px;margin-left: 2px;" rendered="#{mbean.flagAlterar and autenticacaoFaces.permissaoSelecionada.flagAlterar and !avoidUpdate}" />
+
+	<p:commandButton id="btnAlterar2" value="Alterar" icon="salvar" action="#{mbean.updateEvent}"  style="height:28px; width: 110px;margin-left: 2px;" rendered="#{mbean.flagAlterar and autenticacaoFaces.permissaoSelecionada.flagAlterar and avoidUpdate}" />
+
+	<ui:insert name="actionsBtsRight" />
+
+</ui:component>

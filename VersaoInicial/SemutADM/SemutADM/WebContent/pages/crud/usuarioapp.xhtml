@@ -1,0 +1,41 @@
+<ui:composition template="/resources/templates/templateCRUDPesquisa.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${usuarioAPPFaces}" />
+	<ui:param name="mbeanModel" value="${usuarioAPPFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${usuarioAPPFaces.crudPesquisaModel}" />
+
+	
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="70%" columns="3" columnClasses="coluna35, coluna35, coluna30">
+
+			<p:outputLabel for="itNomePesquisa" value="Nome" />
+			<p:outputLabel for="itEmail" value="E-mail" />
+			<p:outputLabel for="Telefone" value="Telefone" />
+
+
+			<p:inputText id="itNomePesquisa" value="#{mbeanPesquisaModel.nome}" style="width: 95%" />
+			<p:inputText id="itEmail" value="#{mbeanPesquisaModel.email}" style="width: 95%" />
+			<p:inputText id="Telefone" value="#{mbeanPesquisaModel.telefone}"  style="width: 95%"/>
+
+		</h:panelGrid>
+		<br />
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+
+		<p:column headerText="Nome">
+			<h:outputText value="#{linha.nome}" />
+		</p:column>
+
+		<p:column headerText="E-mail">
+			<h:outputText value="#{linha.email}" />
+		</p:column>
+
+		<p:column headerText="Telefone">
+			<h:outputText value="#{linha.telefone}" />
+		</p:column>
+		
+	</ui:define>
+
+
+</ui:composition>

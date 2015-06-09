@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".NoticiaActivity" >
+
+    <com.login.android.semut.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_transalvador" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.view.ActionBar>
+
+    <TextView
+        android:id="@+activity_noticia/categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:text="Notícias"
+        android:textColor="@color/transalvador"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+noticia/lstNoticia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/branco"
+        android:dividerHeight="5dp" >
+    </ListView>
+
+</LinearLayout>

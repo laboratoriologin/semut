@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".TransalvadorActivity" >
+
+    <com.login.android.semut.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_ocorrencias" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.view.ActionBar>
+
+    <GridView
+        android:id="@+transalvador/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:listSelector="@color/branco"
+        android:numColumns="2" >
+    </GridView>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:variablePadding="true" android:drawable="@drawable/load__a" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__b" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__c" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__d" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__e" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__f" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__g" android:duration="100" />
+    <item android:variablePadding="true" android:drawable="@drawable/load__h" android:duration="100" />
+ 
+</animation-list>

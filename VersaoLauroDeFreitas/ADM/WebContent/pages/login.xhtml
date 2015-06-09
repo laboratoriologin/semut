@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Lauro de Freitas</title>
+	<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/css/geral.css" />
+	<link rel="shortcut icon" href="imagens/favicon.ico" />
+</h:head>
+
+<h:body onload="javascript:document.getElementById('login').focus();">
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="100">
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			<h:form id="formLogin" prependId="false">
+				<p:growl id="msgLogin" globalOnly="false" showDetail="true" showSummary="false" />
+				<br />
+				<br />
+				<div align="center">
+
+					<p:panel id="panelLogin" header="Controle de Acesso - ADM" style="width: 280px; text-align: left">
+
+
+						<h:panelGrid style="width: 245px;" columns="2" columnClasses="coluna30, coluna70">
+							<p:outputLabel for="login" value="Login:" />
+							<p:inputText id="login" value="#{autenticacaoFaces.usuario.login}" style="width: 100%;" required="true" requiredMessage="Usuário: Obrigatório" />
+							<p:outputLabel for="senha" value="Senha:" />
+							<p:password id="senha" value="#{autenticacaoFaces.usuario.senha}" feedback="false" style="width: 100%;" required="true" requiredMessage="Senha: Obrigatório" />
+
+						</h:panelGrid>
+						<br/>
+
+
+						<div align="right" style="width: 100%">
+							<p:commandButton ajax="false" title="Acessar" id="btnAcessar" value="Autenticar" style="height: 35px;width: 135px" icon="cadeado" action="#{autenticacaoFaces.login}" />
+						</div>
+
+
+					</p:panel>
+
+				</div>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="35">
+			<h:panelGrid columns="1" width="100%" style="height: 100%" columnClasses="colunaInformativo100">
+				<h:column>
+					<h:outputText value="Lauro de Freitas" />
+				</h:column>
+			</h:panelGrid>
+		</p:layoutUnit>
+	</p:layout>
+
+</h:body>
+
+
+</html>
+
+

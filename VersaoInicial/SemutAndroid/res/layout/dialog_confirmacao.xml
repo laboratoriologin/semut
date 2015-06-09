@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="@dimen/padding_xlarge" >
+
+
+    <TextView
+        android:id="@+dialog_confirmacao/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+dialog_confirmacao/oi"
+        android:text="João Manuel da Silva, "
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+dialog_confirmacao/chamado_sucesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+dialog_confirmacao/nome"
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+dialog_confirmacao/bt_ok"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+dialog_confirmacao/chamado_sucesso"
+        android:layout_centerHorizontal="true"
+        android:onClick="dismissDialog"
+        android:text="OK"
+        android:layout_marginTop="@dimen/padding_xlarge"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

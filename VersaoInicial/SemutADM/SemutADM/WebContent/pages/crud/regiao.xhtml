@@ -1,0 +1,212 @@
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${regiaoFaces}" />
+	<ui:param name="mbeanModel" value="${regiaoFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${regiaoFaces.crudPesquisaModel}" />
+	<ui:param name="avoidUpdate" value="true" />
+
+	<ui:define name="cadastro">
+		<h:panelGrid width="50%" columns="2" columnClasses="coluna6,coluna50">
+			<p:outputLabel for="itNome" value="Nome" />
+			<p:inputText id="itNome" value="#{mbeanModel.nome}" style="width: 30%" required="true" requiredMessage="Nome: Obrigatório" />
+			<h:inputHidden id="itPolygon" value="#{regiaoFaces.polygon}" required="true" requiredMessage="Desenho do polígono: Obrigatório" />
+		</h:panelGrid>
+		<h:panelGrid columns="1">
+			<div>
+				<p:commandButton type="button" value="Apagar Desenho" icon="ui-icon-plus" onclick="apagar();" />
+			</div>
+			<div style="margin-top: 10px; margin-bottom: 10px; width: 1024px; height: 600px;" id="map-canvas"></div>
+		</h:panelGrid>
+
+		<script type="text/javascript">			
+			var map = null;
+			var polygonFinal=null;
+			var drawingManager=null;			
+			
+			function getCoordsToString()
+			{
+				var coordinates = (polygonFinal.getPath().getArray());
+				var strCoords = "";
+				
+				for (var i=0; i &#60; coordinates.length ;i++)
+				{ 
+					var lat = coordinates[i].lat();
+					var lng = coordinates[i].lng();
+					
+					strCoords = strCoords + lat + "," + lng + ";";					
+				}
+
+				$("input[name*='itPolygon']").val(strCoords);
+				console.log(strCoords);
+			}
+			
+			function apagar(){
+				if(polygonFinal!=null)
+				{
+					polygonFinal.setMap(null);
+					
+					drawingManager.setOptions({
+						drawingControl: true,
+						drawingMode: google.maps.drawing.OverlayType.POLYGON
+					});
+				}
+			}
+			
+		    function makePolygon(polyCoords, polyLabel) {
+		        var marker = new MarkerWithLabel({
+		         position: new google.maps.LatLng(0,0),
+		         draggable: false,
+		         raiseOnDrag: false,
+		         map: map,
+		         labelContent: polyLabel,
+		         labelAnchor: new google.maps.Point(30, 20),
+		         labelClass: "labels", // the CSS class for the label
+		         labelStyle: {opacity: 1.0},
+		         icon: "http://placehold.it/1x1",
+		         visible: false
+		        });
+
+		       var poly = new google.maps.Polygon({
+		           paths: polyCoords,
+		           strokeColor: "#FF0000",
+		           strokeOpacity: 0.8,
+		           strokeWeight: 3,
+		           fillColor: "#FF0000",
+		           fillOpacity: 0.35,
+		           map: map
+		       });
+
+		         google.maps.event.addListener(poly, "mousemove", function(event) {
+		           marker.setPosition(event.latLng);
+		           marker.setVisible(true);
+		         });
+		         google.maps.event.addListener(poly, "mouseout", function(event) {
+		           marker.setVisible(false);
+		         });
+		       }
+
+			function initialize() {
+				var mapOptions = {
+					center : new google.maps.LatLng(-12.97102012429756,
+							-38.500943183898926),
+					zoom : 14
+				};
+				
+				drawingManager = new google.maps.drawing.DrawingManager(
+						{
+							drawingMode : google.maps.drawing.OverlayType.POLYGON,
+							drawingControl : true,
+							drawingControlOptions : {
+								position : google.maps.ControlPosition.TOP_CENTER,
+								drawingModes : [ google.maps.drawing.OverlayType.POLYGON ]
+							},
+							polygonOptions : {
+								clickable : false,
+								editable : true,
+								zIndex : 1
+							}
+						});
+
+				map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+				drawingManager.setMap(map);
+				
+				
+				var jsonRegios = #{regiaoFaces.strJson};
+				for (key in jsonRegios.regioes)
+				{
+					var polgynCoord =new Array();
+					                      
+					for (key2 in jsonRegios.regioes[key].coor)
+					{						
+						polgynCoord[key2] =  new google.maps.LatLng(jsonRegios.regioes[key].coor[key2].lat, jsonRegios.regioes[key].coor[key2].long);						
+					}
+
+					makePolygon(polgynCoord, jsonRegios.regioes[key].nome);
+				}
+				
+			    google.maps.event.addListener(drawingManager, 'polygoncomplete', function (polygon) {
+				    polygonFinal = polygon
+					
+					drawingManager.setOptions({
+						drawingControl: false,
+						drawingMode: null
+					});
+				    
+					google.maps.event.addListener(polygonFinal.getPath(), 'remove_at', function() {
+						getCoordsToString();
+					});
+
+					google.maps.event.addListener(polygonFinal.getPath(), 'set_at', function() {
+						getCoordsToString();
+					});
+
+					google.maps.event.addListener(polygonFinal.getPath(), 'insert_at', function() {
+						getCoordsToString();
+					});
+					
+			        getCoordsToString();			        
+			    });
+			    
+			    
+			    var jsonRegiaoSelecionada = #{regiaoFaces.strJsonSelecionado};
+			    
+			    if(!jQuery.isEmptyObject(jsonRegiaoSelecionada))
+			    {
+					var polgynCoord =new Array();
+					console.log(polgynCoord);                      
+					for (key2 in jsonRegiaoSelecionada.regiao.coor)
+					{						
+						polgynCoord[key2] =  new google.maps.LatLng(jsonRegiaoSelecionada.regiao.coor[key2].lat, jsonRegiaoSelecionada.regiao.coor[key2].long);						
+					}
+
+					polygonFinal = new google.maps.Polygon({
+						    paths: polgynCoord,						     	
+						    editable: true
+					});
+					
+					drawingManager.setOptions({
+						drawingControl: false,
+						drawingMode: null
+					});
+					
+					google.maps.event.addListener(polygonFinal.getPath(), 'remove_at', function() {
+						getCoordsToString();
+					});
+
+					google.maps.event.addListener(polygonFinal.getPath(), 'set_at', function() {
+						getCoordsToString();
+					});
+
+					google.maps.event.addListener(polygonFinal.getPath(), 'insert_at', function() {
+						getCoordsToString();
+					});					
+						
+				    polygonFinal.setMap(map);
+			    }			    
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
+	</ui:define>
+
+
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="50%" columns="2" columnClasses="coluna6,coluna50">
+			<p:outputLabel for="itNomePesquisa" value="Nome" />
+			<p:inputText id="itNomePesquisa" value="#{mbeanPesquisaModel.nome}" style="width: 30%" />
+		</h:panelGrid>
+		<br />
+
+	</ui:define>
+
+
+	<ui:define name="colunasTabela">
+		<p:column headerText="Nome">
+			<div align="center">
+				<h:outputText value="#{linha.nome}" />
+			</div>
+		</p:column>
+	</ui:define>
+
+</ui:composition>

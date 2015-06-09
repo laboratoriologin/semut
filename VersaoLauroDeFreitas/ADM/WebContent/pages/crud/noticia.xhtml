@@ -1,0 +1,94 @@
+<ui:composition template="/resources/templates/templateCRUD.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:param name="mbean" value="${noticiaFaces}" />
+	<ui:param name="mbeanModel" value="${noticiaFaces.crudModel}" />
+	<ui:param name="mbeanPesquisaModel" value="${noticiaFaces.crudPesquisaModel}" />
+
+	<ui:define name="cadastro">
+
+		<h:panelGrid width="50%" columns="1" columnClasses="coluna50">
+
+			<p:outputLabel for="itTitulo" value="Titulo" />
+			<p:inputText id="itTitulo" value="#{mbeanModel.titulo}" style="width: 95%" required="true" requiredMessage="Nome: Obrigatório" />
+
+			<p:outputLabel for="itDescricao" value="Descrição" />
+			<p:inputText id="itDescricao" value="#{mbeanModel.descricao}" style="width: 95%" required="true" requiredMessage="Nome: Obrigatório" />
+
+
+			<p:outputLabel for="cbxTipoNoticia" value="Tipo de Notícia" />
+			<p:selectOneMenu id="cbxTipoNoticia" value="#{mbeanModel.tipoNoticia.id}" required="true" requiredMessage="Tipo de Notícia: Campo obrigatório" style="width:95%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.tiposNoticia}" />
+			</p:selectOneMenu>
+
+
+			<h:panelGrid id="file" columns="3" columnClasses="coluna50, coluna50_2, coluna50" style="width: 50%">
+
+
+
+				<h:form enctype="multipart/form-data">
+
+					<p:fileUpload fileUploadListener="#{mbean.uploadFile}" label="Selecionar" auto="true" update="@form" />
+
+				</h:form>
+
+				<p:outputPanel layout="inline" autoUpdate="true">
+					<h:graphicImage rendered="#{!empty mbean.getCrudModel().getImagem()}" value="http://#{request.serverName}:#{request.serverPort}/arquivos_semut_lauro/#{mbean.getCrudModel().getImagem()}" width="250" height="250" />
+
+				</p:outputPanel>
+
+
+				<p:column style="text-align: center" styleClass="coluna10">
+					<p:commandLink action="#{mbean.delMidia}" process="@this">
+						<p:commandButton ajax="false" value="Remover imagem" style="margin-right:20px;" />
+					</p:commandLink>
+				</p:column>
+			</h:panelGrid>
+
+		</h:panelGrid>
+
+	</ui:define>
+
+	<ui:define name="pesquisaCampos">
+		<h:panelGrid width="60%" columns="2" columnClasses="coluna30, coluna30">
+
+
+			<p:outputLabel for="itTituloPesquisa" value="Titulo" />
+
+			<!-- 	<p:outputLabel for="cbxTipoNoticiaPesquisa" value="Tipo de Notícia" /> -->
+
+
+
+
+			<p:inputText id="itTituloPesquisa" value="${mbeanPesquisaModel.titulo}" style="width: 95%" />
+			<!-- <p:selectOneMenu id="cbxTipoNoticiaPesquisa" value="${mbeanPesquisaModel.tipoNoticia.id}" 
+			style="width:70%">
+				<f:selectItem itemLabel="Não Selecionado" itemValue="" />
+				<f:selectItems value="#{mbean.tiposNoticia}" />
+			</p:selectOneMenu> -->
+
+
+		</h:panelGrid>
+		<br />
+	</ui:define>
+
+	<ui:define name="colunasTabela">
+
+		<p:column headerText="Titulo">
+			<div align="center">
+				<h:outputText value="#{linha.titulo}" />
+			</div>
+		</p:column>
+
+		<p:column headerText="Data">
+			<div align="center">
+				<h:outputText value="#{linha.dataExtenso}" />
+			</div>
+		</p:column>
+
+
+
+	</ui:define>
+
+
+</ui:composition>

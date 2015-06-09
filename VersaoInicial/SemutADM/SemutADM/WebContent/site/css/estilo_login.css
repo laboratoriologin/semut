@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+#body{
+	text-align:center;
+	margin:0;
+	padding:0;
+}
+
+#geralLogin {
+    height: 230px;
+    margin: 0 auto;
+    padding: 140px 0 0;
+    width: 350px;
+
+
+}
+
+#topoLogin {
+    background-color: #33558C;
+    clear: right;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 15px;
+    width: 350px;
+}
+#conteudoLogin {
+    background-color: #53586F;
+    clear: left;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 190px;
+    width: 350px;
+}
+
+#nomeDescricao {
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 10px;	
+    padding: 13px 10px 0 0;
+    text-align: right;
+    width: 77px;
+	
+}
+
+#senhaDescricao {
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 10px;	
+    padding: 13px 10px 0 0;
+    text-align: right;
+    width: 77px;
+}
+
+
+
+.formularioLogin {
+    background-color: #8599BA;
+    border: medium none;
+    color: #1A2B46;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 17px 3px 1px 5px;
+    padding: 8px 4px 9px 10px;
+	width: 200px;
+}
+
+#nomeCampo {
+	display: inline;
+	float: left;
+	width: 180px;
+}
+
+#senhaCampo {
+	display: inline;
+	float: left;
+	width: 180px;
+}
+
+
+#esqueciSenha {
+    clear: both;
+    display: inline;
+    float: left;
+    padding-left: 92px;
+    padding-top: 6px;
+}
+
+#esqueciSenha a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#esqueciSenha a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#botaoEntrar p a {
+    background: url("../imagens/bg_botaoLoginEntrar.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: inline-block;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    height: 27px;
+    line-height: 18px;
+    margin: 35px 0 0 -18px;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    width: 132px;
+}
+
+
+#botaoEntrar p a:hover {
+	background: url(../imagens/bg_botaoLoginEntrar_mouseSobre.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+}
+
+#rodape span {
+	margin-right: 5px;
+}

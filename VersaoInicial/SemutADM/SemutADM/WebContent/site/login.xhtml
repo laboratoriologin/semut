@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<link rel="shortcut icon" href="imagens/favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="Expires" content="0" />
+
+<title>Dashboard ::: Login</title>
+
+
+	<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+	<link href="css/estilo_login.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css">
+</style>
+
+</h:head>
+<h:body>
+	<p:growl id="growl" showDetail="true" showSummary="false" sticky="false" autoUpdate="true" globalOnly="false" />
+	<div style="width: 100%; height: 100%;">
+		<h:form>
+			<!--Topo Início-->
+			<div id="barraTopo1">Dashboard Prefeitura</div>
+			<!--Topo Fim-->
+			<div id="geralLogin">
+				<div id="topoLogin">Login</div>
+				<div id="conteudoLogin">
+					<div id="nomeDescricao">Usuário:</div>
+					<div id="nomeCampo">
+						<h:inputText id="login" styleClass="formularioLogin" value="#{autenticacaoFaces.usuario.login}" size="30" maxlength="100" />
+					</div>
+					<div id="senhaDescricao">Senha:</div>
+					<div id="senhaCampo">
+						<h:inputSecret id="senha" styleClass="formularioLogin" value="#{autenticacaoFaces.usuario.senha}" maxlength="100" />
+					</div>
+					<span id="esqueciSenha"><a href="lembrarSenha.html">Esqueci a senha</a></span> <span id="botaoEntrar">
+						<p>
+							<h:commandLink href="#" title="Entrar" action="#{autenticacaoFaces.login}">Entrar</h:commandLink>
+						</p>
+					</span>
+					<!--Rodapé Início-->
+					<div id="rodape">
+						<span> Dashboard Ocorrências - Prefeitura | Login 2014 </span>
+					</div>
+					<!--Rodapé Fim-->
+				</div>
+			</div>
+		</h:form>
+	</div>
+</h:body>
+</html>

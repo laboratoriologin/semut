@@ -1,0 +1,1183 @@
+@charset "utf-8";
+
+.link:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.link:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.link:hover {
+	color: #FFFFFF;
+	background: url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: repeat-x;
+	text-decoration: underline;
+	text-decoration: underline;
+}
+
+.link:active {
+	color: #FFFFFF;
+	text-decoration: underline;
+	background-color: #000000;
+}
+
+.ui-datepicker {
+	font-size: 9pt !important
+}
+
+.tooltip {
+	position: absolute;
+	width: 145px;
+	padding: 5px;
+	border: 1px solid gray;
+	font-size: 9pt;
+	font-family: Verdana;
+	background-color: #fff;
+	color: #000;
+}
+/*
+ body {
+	background-image: url(../imagens/bg4.jpg);
+	background-repeat: repeat;
+}*/
+
+html{ height: 100%; }
+
+body {
+                height:100%;
+                margin:0;
+                padding:0;
+	background: -webkit-linear-gradient(#52576E, #393D51, #282934, #393D51, #52576E); /* For Safari */
+	background: -o-linear-gradient(#52576E, #393D51, #282934, #393D51, #52576E); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient (#52576E, #393D51, #282934, #393D51, #52576E); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#52576E, #393D51, #282934, #393D51, #52576E); /* Standard syntax (must be last) */
+}
+
+#geral {
+	width: 100%;
+	height: 626px;
+	z-index: 8;
+	text-align: center;
+	min-width: 1024px;
+}
+
+/*
+------------------------------------
+-------------Topo Início------------
+------------------------------------
+*/
+#barraTopo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	background-color: #F4E98C;
+	text-align: center;
+	vertical-align: bottom;
+	letter-spacing: normal;
+	word-spacing: normal;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #33558C;
+	line-height: 70px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 70px;
+	z-index: 10;
+	text-align: center;
+	width: 100%;
+}
+
+#localData {
+	height: 30px;
+	z-index: 8;
+	float: left;
+	width: 39%;
+	display: inline-block;
+}
+
+#barraTopo2 {
+	position: absolute;
+	left: 0px;
+	top: 70px;
+	height: 30px;
+	z-index: 10;
+	display: block;
+	width: 100%;
+}
+
+#barraTopo2 #localData {
+	background-color: #CCD5E2;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #33558C;
+	text-indent: 5px;
+}
+
+#usuario {
+	background-color: #7D86AE;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #1A2B46;
+	text-indent: 5px;
+	text-align: center;
+	height: 30px;
+	z-index: 8;
+	width: 18%;
+	float: left;
+	display: inline-block;
+}
+
+#periodo {
+	background-color: #5C6C9C;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFFFFF;
+	text-indent: 5px;
+	height: 30px;
+	z-index: 8;
+	float: left;
+	width: 20%;
+	display: inline-block;
+	text-indent: 50px;
+}
+
+#txtStartDate {
+	width: 24%;
+}
+
+#txtEndDate {
+	width: 24%;
+}
+
+.periodo {
+	background-image: url(../imagens/icone_periodo.png);
+	background-repeat: no-repeat;
+	background-position: 14px;
+}
+
+#atualizarTela {
+    background-color: #7D86AE;
+    border-style: none;
+    color: #1A2B46;
+    display: inline-block;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+	vertical-align: middle;
+    text-align: center;
+    width: 3%;
+    z-index: 8;
+}
+#admOcorrencias {
+	background-color: #53586F;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color: #FFFFFF;
+	text-indent:5px;
+	
+	height: 30px;
+	width: 13%;
+	float: left;
+	display: inline-block;
+	top:0;
+
+
+}
+
+#reload{
+	cursor: pointer;
+}
+
+/*
+.admOcorrencias {
+	background-image: url(../imagens/icone_adm_ocorrencias.png);
+	background-repeat:no-repeat;
+	background-position: 14px;
+}
+*/
+
+
+/*Inicio Novo background botões Barra Topo */
+
+
+.bg_botaoBarraTopo a {
+	background-color:#53586F;
+	text-decoration:none;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+
+}
+
+
+.bg_botaoBarraTopo a:active {
+	background:url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+
+}
+
+.bg_botaoBarraTopo a:hover {
+	background:url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+
+}
+
+
+.bg_botaoBarraTopoAtualizar a {
+	background-color:#707FAF;
+	text-decoration:none;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+}
+
+
+.bg_botaoBarraTopoAtualizar a:hover {
+	background:url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+}
+
+.bg_botaoBarraTopoAtualizar a:active {
+	background:url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display:block;
+	left:0;
+	top:0;
+	color: #FFF;
+}
+
+
+/*Final Novo background botões Barra Topo */
+
+#sair {
+	background-color: #3B4460;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	text-align: left;
+	line-height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFFFFF;
+	text-indent: 5px;
+	height: 30px;
+	z-index: 8;
+	float: left;
+	width: 7%;
+	display: inline-block;
+	text-indent: 51px;
+	cursor: pointer;
+}
+
+.sair {
+	background-image: url(../imagens/icone_sair.png);
+	background-repeat: no-repeat;
+	background-position: 16px;
+	cursor: pointer;
+}
+
+/*
+------------------------------------
+----------------Topo Fim------------
+------------------------------------
+*/
+
+/*
+------------------------------------
+-------------Conteúdo Início--------
+------------------------------------
+*/
+#conteudo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	min-height: 480px;
+	min-width: 1024px;
+}
+
+/*-------------Seleção entre mapa e gráficos------------*/
+#abas {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	width: 100%;
+	height: 22px;
+	z-index: 10;
+}
+
+#opcao1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #233a5f;
+	text-indent: 35px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #a0a4c3;
+	text-align: left;
+	z-index: 3;
+	float: left;
+	display: inline-block;
+	width: 93%;
+	height: 22px;
+}
+
+#opcao2 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+	line-height: 22px;
+	background-color: #233A5F;
+	text-align: center;
+	text-indent: 35px;
+	height: 22px;
+	z-index: 3;
+	width: 7%;
+	float: left;
+	display: inline-block;
+}
+
+.mapaSelec {
+	background-image: url(../imagens/icone_mapa_selec.png);
+	background-repeat: no-repeat;
+	background-position: 3px;
+}
+
+.mapaNSelec {
+	background-image: url(../imagens/icone_mapa_n_selec.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.graficoSelec {
+	background-image: url(../imagens/icone_grafico_selec.png);
+	background-repeat: no-repeat;
+	background-position: 3px;
+}
+
+.graficoNSelec {
+	background-image: url(../imagens/icone_grafico_n_selec.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+/*-------------Visualização Ocorrências-------------*/
+.botaoPendenteA {
+	background: url(../imagens/bg_botaoOPendentes_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	top: 0;
+	color: #FFF;
+	line-height: 88px;
+	text-indent: 8px;
+}
+
+.botaoPendenteAActive {
+	background: url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	top: 0;
+	color: #FFF;
+	line-height: 88px;
+	text-indent: 8px;
+}
+
+.botaoPendenteAHover {
+	background: url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 60px;
+	left: 0;
+	top: 0;
+	color: #FFF;
+	line-height: 88px;
+	text-indent: 8px;
+}
+
+.botaoAceitaA {
+	background: url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 58px;
+}
+
+.botaoAceitaAActive {
+	background: url(../imagens/bg_botaoOAceitas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoAceitaAHover {
+	background: url(../imagens/bg_botaoOAceitas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoResolvidaA {
+	background: url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 58px;
+}
+
+.botaoResolvidaAActive {
+	background: url(../imagens/bg_botaoOResolvidas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoResolvidaAHover {
+	background: url(../imagens/bg_botaoOResolvidas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoRecusadaA {
+	background: url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 58px;
+}
+
+.botaoRecusadaAActive {
+	background: url(../imagens/bg_botaoORecusadas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoRecusadaAHover {
+	background: url(../imagens/bg_botaoORecusadas_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #FFFFFF;
+	line-height: 58px;
+}
+
+.botaoTodasCadUsuarioA,.botaoTodaA,.botaoStatusBairroA {
+	background: url(../imagens/bg_botaovisuOcorrencia_nSelec.png);
+	background-repeat: no-repeat;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+.botaoTodasCadUsuarioAActive,.botaoTodaAActive,.botaoStatusBairroAActive
+	{
+	background: url(../imagens/bg_botaovisuOcorrencia_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+.botaoTodasCadUsuarioAHover,.botaoTodaAHover,.botaoStatusBairroAHover {
+	background: url(../imagens/bg_botaovisuOcorrencia_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	font-weight: bolder;
+	display: block;
+	width: 100%;
+	height: 45px;
+	left: 0;
+	top: 0;
+	color: #33558C;
+	line-height: 45px;
+}
+
+#visualizacaoOcorrencias #visualizacaoOTexto {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #33558C;
+	font-size: 11px;
+	line-height: normal;
+	background-color: #a0a4c3;
+	text-align: center;
+	text-indent: 3px;
+}
+
+#visualizacaoOcorrencias #botaoOPendentes {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.botaovisuOcorrencia {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: left;
+	color: #FFF;
+	list-style-type: none;
+	list-style-position: outside;
+	text-indent: 40px;
+	line-height: 26px;
+}
+
+.botaoOPendentes {
+	background-image: url(../imagens/bg_botaoOPendentes_selec.png);
+	background-repeat: no-repeat;
+}
+
+#visualizacaoOcorrencias {
+	position: relative;
+	left: 44%;
+	top: 135px;
+	width: 131px;
+	height: 400px;
+	z-index: 6;
+	display: inline-block;
+}
+
+#visualizacaoOTexto {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	height: 50px;
+	z-index: 6;
+}
+
+#botaoOPendentes {
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	width: 100%;
+	height: 60px;
+	z-index: 6;
+}
+
+#descricaoPendentes {
+	position: absolute;
+	left: 40px;
+	top: 37px;
+	width: 67px;
+	height: 19px;
+	z-index: 8;
+}
+
+#botaoOAceitas {
+	position: absolute;
+	left: 0px;
+	top: 110px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOResolvidas {
+	position: absolute;
+	left: 0px;
+	top: 155px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoORecusadas {
+	position: absolute;
+	left: 0px;
+	top: 200px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOTodasCadUsuarios {
+	position: absolute;
+	left: 0px;
+	top: 245px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoOTodas {
+	position: absolute;
+	left: 0px;
+	top: 290px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+#botaoStatusBairro {
+	position: absolute;
+	left: 0px;
+	top: 335px;
+	width: 100%;
+	height: 45px;
+	z-index: 6;
+}
+
+/*-------------Número das ocorrências visualizadas-------------*/
+#numeroPendentesMap {
+	color: #FFFFFF;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	height: 30px;
+	left: 29px;
+	min-width: 90px;
+	position: absolute;
+	text-align: right;
+	top: 18px;
+	width: 90px;
+	word-wrap: break-word;
+	z-index: 10;
+}
+
+.numeroDemaisOcorrenciasMap {
+	color: #1A2B46;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bolder;
+	height: 15px;
+	left: 29px;
+	min-width: 90px;
+	position: absolute;
+	text-align: right;
+	text-shadow: 1px 1px 13px #FFFFFF;
+	top: 12px;
+	width: 90px;
+	word-wrap: break-word;
+	z-index: 10;
+}
+
+/*-------------Mapa-------------*/
+#areaMapa {
+	position: absolute;
+	left: 21px;
+	top: 135px;
+	width: 86%;
+	height: 60%;
+	z-index: 5;
+	min-height: 480px;
+	min-width: 800px;
+}
+
+#barraTituloMapa {
+	width: 100%;
+	height: 24px;
+	z-index: 5;
+}
+
+#botaoSalvar {
+	position: relative;
+	left: 98%;
+	top: 0;
+	width: 30px;
+	height: 20px;
+	z-index: 6;
+	background-image: url(../imagens/icone_salvar.png);
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+#botaoTransalvador {
+	position: absolute;
+	right: 120px;
+	width: 10%;
+	height: 20px;
+	z-index: 7;
+}
+
+#botaoSucom {
+	position: absolute;
+	right: 50px;
+	width: 10%;
+	height: 20px;
+	z-index: 6;
+}
+
+#botaoTransalvadorA {
+	position: relative;
+	left: 35%;
+	top: 0;
+	width: 100px;
+	height: 20px;
+	z-index: 7;
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #FFF;
+}
+
+#botaoSucomA {
+	position: relative;
+	left: 44%;
+	top: 0;
+	height: 20px;
+	width: 100px;
+	z-index: 8;
+	margin-top: -20px;
+	background-repeat: no-repeat;
+	background-position: left;
+	color: #FFF;
+}
+
+#textoTMapa {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 24px;
+	z-index: 5;
+}
+
+#areaMapa #barraTituloMapa #textoTMapa {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FFF;
+	background-color: #33558c;
+	text-indent: 0;
+	line-height: 24px;
+	background-image: url(../imagens/bg_barrasTitulo.png);
+	background-repeat: repeat-x;
+	font-weight: bold;
+}
+
+#conteudoMapa {
+	width: 100%;
+	height: 94%;
+	z-index: 5;
+	background-color: #FFFFFF;
+}
+
+/*-------------Legenda-------------*/
+#legendaMapa {
+	width: 100%;
+	height: 30px;
+	z-index: 5;
+	overflow: hidden;
+}
+
+.textoLegendaMapa {
+	text-align: left;
+}
+
+.aceitas {
+	text-align: left;
+	left:
+}
+
+#areaMapa #legendaMapa {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #33558c;
+	background-color: #d0d2d3;
+	line-height: 30px;
+	text-indent: 5px;
+}
+
+#legendaTitulo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 72px;
+	height: 30px;
+	z-index: 5;
+}
+
+#legendaConteudo {
+	float: left;
+	height: 30px;
+	z-index: 5;
+	overflow: hidden;
+}
+
+#areaMapa #legendaMapa #legendaTitulo {
+	background-color: #FFF;
+}
+
+#imagemLOpcao1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30px;
+	height: 30px;
+}
+
+#textoLOpcao1 {
+	position: absolute;
+	left: 30px;
+	top: 0;
+	width: 766px;
+	height: 30px;
+}
+
+#textoLegenda {
+	float: left;
+	height: 30px;
+}
+
+/*-------------Legenda Mapa com seleção do bairro-------------*/
+#legendaBairro {
+	float: left;
+	width: 72px;
+	z-index: 5;
+	margin-right: 10px;
+}
+
+#legendaTipoOcorrencia {
+	float: left;
+	width: 80px;
+	z-index: 5;
+	margin-right: 10px;
+}
+
+#legendaTitulo2 {
+	width: 72px;
+	float: left;
+	margin-left: 20px;
+}
+
+#menuSelecaoBairro {
+	float: left;
+	width: 150px;
+	z-index: 10;
+	margin-right: 10px;
+	padding-top: 5px;
+}
+
+#menuSelecaoTipoOcorrencia {
+	float: left;
+	width: 150px;
+	z-index: 10;
+	margin-right: 20px;
+	padding-top: 5px;
+}
+
+#menuDrawingPolygon {
+	float: left;
+	height: 30px;
+	z-index: 5;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+#areaMapa #legendaMapa #legendaTitulo2 {
+	background-color: #FFF;
+}
+
+#areaMapa #legendaMapa #legendaBairro {
+	background-color: #FFF;
+}
+
+#areaMapa #legendaMapa #legendaTipoOcorrencia {
+	background-color: #FFF;
+}
+
+#imagemLegendaUsuario {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#imagemLegendaSuper {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+.textoLegendaUsuario {
+	height: 30px;
+	float: left;
+}
+
+.textoLegendaSuper {
+	height: 30px;
+	float: left;
+}
+
+#imagemLegendaOpcaoPendentes {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#textoLegendaOpcaoPendentes {
+	height: 30px;
+	float: left;
+}
+
+#imagemLegendaOpcaoAceitas {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#textoLegendaOpcaoAceitas {
+	height: 30px;
+	float: left;
+}
+
+#imagemLegendaOpcaoResolvidas {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#textoLegendaOpcaoResolvidas {
+	height: 30px;
+	float: left;
+}
+
+#imagemLegendaOpcaoRecusadas {
+	height: 30px;
+	width: 30px;
+	float: left;
+}
+
+#textoLegendaOpcaoRecusadas {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoPendente {
+	height: 30px;
+	float: left;
+}
+
+.pendente {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoAceita {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoSuper {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoUsuario {
+	height: 30px;
+	float: left;
+}
+
+.aceita {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoResolvida {
+	height: 30px;
+	float: left;
+}
+
+.resolvida {
+	height: 30px;
+	float: left;
+}
+
+.numeroPorRegiaoRecusada {
+	height: 30px;
+	float: left;
+}
+
+.recusada {
+	height: 30px;
+	float: left;
+}
+
+/*
+------------------------------------
+-------------Conteúdo Fim-----------
+------------------------------------
+*/
+
+/*
+------------------------------------
+-------------Rodapé Início----------
+------------------------------------
+*/
+#rodape {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #33558c;
+	text-align: right;
+	background-color: #A6A8AB;
+	bottom: 0;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	z-index: 50;
+	position: fixed;
+	left: 0px;
+}
+
+#geral #rodape span {
+	margin-right: 5px;
+}
+
+/*Inicio Novo background botões Barra Topo */
+.bg_botaoBarraTopo a {
+	background-color: #53586F;
+	text-decoration: none;
+	display: block;
+	left: 0;
+	top: 0;
+	color: #FFF;
+}
+
+.bg_botaoBarraTopo a:active {
+	background: url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display: block;
+	left: 0;
+	top: 0;
+	color: #FFF;
+}
+
+.bg_botaoBarraTopo a:hover {
+	background: url(../imagens/bg_botaoBarraTopo_selec.png);
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	display: block;
+	left: 0;
+	top: 0;
+	color: #FFF;
+}
+
+/*Final Novo background botões Barra Topo */

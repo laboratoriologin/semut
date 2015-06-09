@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mata de São João</string>
+    <string name="username">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_ocorrencia">OcorrenciaActivity</string>
+    <string name="registro_ocorrencia">Registro de Ocorrência</string>
+    <string name="confirmar_dados">Confirmação de Dados</string>
+    <string name="nome_apresentacao">João Manuel da Silva</string>
+    <string name="lb_nome">Nome</string>
+    <string name="lb_data">Data</string>
+    <string name="lb_hora">Hora</string>
+    <string name="lb_ocorrencia">Ocorrência</string>
+    <string name="lb_texto">Texto</string>
+    <string name="lb_protocolo">Protocolo</string>
+    <string name="sua_ocorrencia">Digite aqui sua ocorrência</string>
+    <string name="enviar_imagem">Enviar Imagem</string>
+    <string name="continuar">Continuar</string>
+    <string name="texto_vazio">Não foi digitado nenhum texto</string>
+    <string name="voltar">Voltar</string>
+    <string name="concluir">Concluir</string>
+    <string name="image">Imagem</string>
+    <string name="girar_imagem">Girar imagem</string>
+    <string name="localizacao_atual">Usar localização \n atual</string>
+    <string name="title_activity_marcacao_mapa">MarcacaoMapaActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_confirmacao_ocorrencia">ConfirmacaoOcorrenciaActivity</string>
+    <string name="autenticar">Logar</string>
+    <string name="enviar">Enviar</string>
+    <string name="registrar">Cadastro</string>
+    <string name="esqueci_senha">Lembrar senha</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="normas">Os termos e condições a seguir descrevem as regras aplicáveis à utilização do aplicativo SEMUT pelos usuários de tal produto (doravante simplesmente “Usuários”), disponibilizado pela APPMIX, disponibilizado através da Play Store.
+	São entendidos como Usuários quaisquer internautas que utilizem o aplicativo SEMUT. Os Usuários, ao utilizarem o aplicativo SEMUT, se submetem automaticamente às regras e condições do presente Termo de Uso (“Termo”). Portanto, é importante que os Usuários leiam cuidadosa e atentamente as disposições do presente Termo. Caso o Usuário não concorde com qualquer dos termos aqui previstos, não deverá utilizar o aplicativo SEMUT, pois sua utilização implicará na automática e integral aceitação do mesmo.
+	As regras aqui dispostas se aplicam aos Usuários adicionalmente às regras da legislação brasileira de internet, regras estas que o Usuário declara conhecer e aceitar ao fazer uso da rede mundial de computadores, assim como suas funcionalidades.
+
+	Ao utilizar qualquer aplicativo disponibilizado pela APPMIX, tais como o aplicativo SEMUT, o Usuário aceita os termos da Política de Privacidade do SEMUT (www.appmix.com.br), que define de que forma são utilizadas pela empresa as informações cadastrais relativas aos Usuários.
+	O Usuário será o responsável por todas as atividades decorrentes e atos praticados pelo seu uso do Aplicativo.
+	O Usuário isenta e desresponsabiliza o Desenvolvedor e a Divulgadora, bem como seus representantes, agentes e funcionários de queixas de terceiros causadas por seu mau uso do Aplicativo, incluindo qualquer responsabilidade ou despesa proveniente de queixas, perdas, danos (diretos e consequentes), ações judiciais, sentenças, despesas processuais ou honorários de qualquer tipo e natureza, assumindo geral e total responsabilidade pelos atos praticados.
+	Com efeito, o Desenvolvedor e a Divulgadora se isentam de qualquer responsabilidade sobre os atos dos indivíduos retratados nas imagens do Aplicativo, bem como sobre o mau uso do Aplicativo pelos Usuários.
+	O Usuário concorda em se responsabilizar por seu próprio uso do Aplicativo, por quaisquer marcações que fizer e por quaisquer consequências delas. O Usuário concorda em utilizar o Aplicativo de acordo com todas as leis, normas e regulamentos locais, estaduais, nacionais e internacionais.
+	
+	</string>
+<string name="Quadro_de_avisos">Quadro de avisos</string>
+</resources>

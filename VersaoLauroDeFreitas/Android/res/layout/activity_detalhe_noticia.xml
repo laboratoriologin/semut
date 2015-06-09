@@ -1,0 +1,179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalheNoticiaActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.login.android.semut.lauro.view.ActionBar
+        android:id="@+id/actionbar"
+        style="@style/ActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imagem_action_bar"
+                android:layout_width="@dimen/actionbar_item_width"
+                android:layout_height="@dimen/actionbar_item_height"
+                android:layout_centerVertical="true"
+                android:onClick="backPressed"
+                android:src="@drawable/iconemenu_transalvador" />
+
+            <TextView
+                android:id="@+id/titulo_action_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagem_action_bar"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.login.android.semut.lauro.view.ActionBar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        <TextView
+            android:id="@+noticiaDetalhe/data_publicacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+noticiaDetalhe/salvar_button"
+            android:layout_weight="2"
+            android:singleLine="true"
+            android:text="01/11/2013"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+noticiaDetalhe/salvar_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+noticiaDetalhe/compartilhar_button"
+            android:layout_weight="1"
+            android:background="@drawable/bt_salvar"
+            android:onClick="salvar"
+            android:text="" />
+        
+          <Button
+            android:id="@+noticiaDetalhe/excluir_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+noticiaDetalhe/compartilhar_button"
+            android:layout_weight="1"
+            android:background="@drawable/bt_excluir"
+            android:onClick="excluir"
+            android:text="" 
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+noticiaDetalhe/compartilhar_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/bt_compartilhar"
+            android:onClick="compartilhar"
+            android:text="" />
+        
+    </RelativeLayout>
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+    <TextView
+        android:id="@+noticiaDetalhe/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:text="Esquema especial de transito e transporte prepara Barradão para jogo entre Vitoria e Corinthias"
+        android:textColor="@color/transalvador"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+noticiaDetalhe/imagem"
+        android:layout_below="@+noticiaDetalhe/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+noticiaDetalhe/imgNoticiaDetalhe"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/imagem_cancelada" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+noticiaDetalhe/imagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+	<ScrollView android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+        <TextView
+            android:id="@+noticiaDetalhe/descricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+item_list_noticia/imgNoticia"
+            android:layout_toRightOf="@+item_list_noticia/imgNoticia"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="A Transalvador preparou uma operação especial de trânsito e transporte para a partida de futebol entre Vitória e Corinthians deste domingo (03), marcada para 16 horas (horário local) no Estádio Manoel Barradas, o Barradão. Estão escalados para atuar 67 agentes de trânsito e transporte nas imediações do estádio.
+
+Pela nova estratégia de circulação, quem estiver na Avenida Paralela não poderá acessar a ligação da Av. Artêmio de Castro Valente com a Av. Aliomar Baleeiro, mais conhecida como Estrada Velha do Aeroporto, nem a Via Regional, no período de uma hora que antecede a partida até uma hora após o jogo.
+
+Como alternativa, os torcedores deverão acessar a Estrada do Mocambo, nas proximidades do Condomínio Trobogy, ou seguir pela Av. são Rafael e Pau da Lima, até chegar à Estrada Velha do Aeroporto.
+
+Ao final da partida, durante uma hora, a via que dá acesso da Av. São Rafael para a Via Regional também será interditada.  Neste caso, a opção é tomar a Via Regional a partir da Estrada Velha.
+
+O superintendente Fabrizzio Muller explica que as mudanças são necessárias para viabilizar o fluxo de veículos e pedestres ao Barradão, minimizando transtornos, e sugere: “recomendamos aos torcedores que obedeçam a sinalização, seguindo as orientações dos agentes de trânsito, policiais militares e guarda municipal”. “Todos estarão empenhados para proporcionar conforto, fluidez e segurança no deslocamento ao redor do estádio”, diz.
+
+Estacionamento - “Sugerimos aos torcedores que cheguem com antecedência e estacionem em local permitido”, complementa Fabrizzio. Ele explica ainda que só será admitido o estacionamento de veículos do lado direito, sentido Barradão, tanto da Via Regional quanto da Av. Maria Lúcia, que é a ligação entre o bairro de São Marcos e a Via Regional.
+"
+            android:textColor="@color/preto" />
+        </ScrollView>
+    </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+   <ImageView
+        android:id="@+id/expanded_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="invisible"
+        android:contentDescription="@string/image" />
+
+</FrameLayout>

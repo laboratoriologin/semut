@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*Mensagem alerta para quando não houver registros no gráfico*/
+
+.caixaMensagemSemRegistro{
+	border-radius: 4px;
+	background-color: #FEF1EC;
+    border: 1px solid #CD0A0A;
+    color: #CD0A0A;
+	box-sizing:border-box;
+	width: 230px;	
+	margin:10px;
+}
+
+.ui-icon-alerta1{
+	height: 16px;
+	width: 16px;
+	background: url(../imagens/ui-icons_A53736_256x240.png);
+	background-position: 0 -144px;
+	float:left;
+	margin-right: 4px;
+}
+
+.mensagemSemRegistro {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	color: #A53736;
+}

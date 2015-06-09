@@ -1,0 +1,29 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+		
+		<p:dialog id="modalDialogCatgeoria" header="Cadastrar nova categoria"
+			widgetVar="dialogNovaCategoria" modal="true"
+			resizable="false" width="400" height="150" >
+			
+			<h:panelGrid id="cadastrarCategoria"  columns="1"
+				columnClasses="coluna50" >
+				
+				<p:outputLabel value="Nome:" for="nome"/>
+				<p:inputText id="nome" required="true"
+				style="width:350px"
+				 value="#{categoriaFaces.crudModel.nome}"
+				 requiredMessage="Nome: Obrigatório"/>
+				
+				<p:commandButton value="Categoria" icon="ui-icon-plus"
+					action="#{categoriaFaces.insertEvent}" process="cadastrarCategoria"
+					update="cadastrarCategoria" />
+				
+				
+				</h:panelGrid>
+	
+		</p:dialog>
+		
+	
+	</ui:composition>

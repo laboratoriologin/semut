@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+listImovelFragment/linerLayoutImgValor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="7dp" >
+
+    <RelativeLayout
+        android:id="@+transalvador/square"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@color/transalvador" >
+
+        <ImageView
+            android:id="@+transalvador/imagemItem"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+             android:id="@+transalvador/textoItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical|right"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/branco"
+            android:layout_below="@+transalvador/imagemItem" />
+    </RelativeLayout>
+
+</RelativeLayout>
